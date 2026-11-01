@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run-manifest.v1.schema.json",
+  "title": "AIG Measurement Lab run manifest v1",
+  "description": "Documents the contract enforced by lab/src/aiglab/manifest.py (the enforcing validator; it also checks runtime/workload registries and the workload version).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "id", "methodology_version", "model", "runtime", "target", "config", "workload", "repetitions"],
+  "properties": {
+    "manifest_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9._-]+$"},
+    "methodology_version": {"enum": ["1.0.0"]},
+    "model": {
+      "type": "object",
+      "required": ["family", "name", "runtime_ref"],
+      "properties": {
+        "family": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "variant": {"type": "string"},
+        "runtime_ref": {"type": "string", "minLength": 1, "description": "the runtime's own model reference, e.g. qwen2.5:7b-instruct"},
+        "quantization": {"type": "string", "description": "declared; preflight blocks if the runtime reports a different one"},
+        "precision": {"type": "string"},
+        "parameter_count": {"type": "string"},
+        "expected_artifact_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$", "description": "pin for strict reproduction"}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {"enum": ["ollama", "llama_cpp", "mlx_lm", "lmstudio", "vllm", "fixture"]},
+        "endpoint": {"type": "string", "pattern": "^http://(127\\.0\\.0\\.1|localhost|\\[::1\\])"},
+        "options": {"type": "object", "description": "extra runtime options, recorded verbatim; num_ctx/temperature/seed/num_predict always come from config"}
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["local", "cloud"]},
+        "hardware_profile": {"type": "string"},
+        "usable_memory_gb": {"type": "number", "minimum": 0},
+        "memory_kind": {"enum": ["unified", "ddr", "vram_gddr", "vram_hbm", "unknown"]},
+        "provider": {"type": "string"},
+        "region": {"type": "string"},
+        "instance": {"type": "string"},
+        "hourly_usd": {"type": "number", "minimum": 0},
+        "price_source_url": {"type": "string"}
+      }
+    },
+    "config": {
+      "type": "object",
+      "required": ["context", "concurrency"],
+      "properties": {
+        "context": {"type": "integer", "minimum": 512, "maximum": 1048576},
+        "concurrency": {"type": "integer", "minimum": 1, "maximum": 32},
+        "max_output_tokens": {"type": "integer", "minimum": 16, "maximum": 32768, "default": 1024},
+        "temperature": {"type": "number", "minimum": 0, "maximum": 2, "default": 0},
+        "seed": {"type": "integer", "minimum": 0, "default": 42}
+      }
+    },
+    "workload": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": {"enum": ["coding", "research", "browser_tool", "rag", "automation"]},
+        "version": {"type": "string"}
+      }
+    },
+    "repetitions": {
+      "type": "object",
+      "required": ["warmup", "measured"],
+      "properties": {
+        "warmup": {"type": "integer", "minimum": 0, "maximum": 10},
+        "measured": {"type": "integer", "minimum": 1, "maximum": 50}
+      }
+    },
+    "limits": {
+      "type": "object",
+      "properties": {"request_timeout_s": {"type": "integer", "minimum": 5, "maximum": 3600, "default": 600}}
+    },
+    "notes": {"type": "string"}
+  }
+}

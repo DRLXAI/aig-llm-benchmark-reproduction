@@ -1,0 +1,2192 @@
+{
+  "schema": "aig.public-measurement-extract/1",
+  "notice": "Allowlisted extract, not an unchanged original. Local paths, endpoints, process IDs, generated content and free-text runtime errors are omitted. Numeric measurements are unchanged. Public checksums cover these extracts, not the original seal.",
+  "source_seal_digest": "sha256:61a3cdc75a1588cfd75d712629678332c61cbb6f71c9aec1f52711d31ea1566f",
+  "run_id": "20261002T212142Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-automati-abf63481",
+  "model": {
+    "artifact_size_gb": 4.68,
+    "family": "Qwen2.5",
+    "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+    "name": "Qwen2.5 7B Instruct",
+    "parameter_size": "7.6B",
+    "quantization": "Q4_K_M",
+    "runtime_ref": "qwen2.5:7b-instruct"
+  },
+  "hardware": {
+    "chip": "Apple M4 Pro",
+    "lab_key": "apple-m4-pro-24gb",
+    "memory_gib": 24,
+    "memory_kind": "unified",
+    "os": "macOS 15.5"
+  },
+  "runtime": {
+    "id": "ollama",
+    "server_parallel_slots": 1,
+    "version": "0.35.0"
+  },
+  "tested_at": "2026-10-02",
+  "methodology_version": "1.0.0",
+  "config": {
+    "concurrency": 1,
+    "context": 8192,
+    "max_output_tokens": 1024,
+    "seed": 42,
+    "temperature": 0
+  },
+  "workload": {
+    "definition_sha256": "1b912e7f84096a2dec5800353eb6a27d9c1f2be59b416d2b8643883f0e955982",
+    "id": "automation",
+    "version": "1.0.0"
+  },
+  "identity_checks": {
+    "artifact_hash": {
+      "ok": true
+    },
+    "effective_context": {
+      "ok": true
+    },
+    "manifest_digest": {
+      "ok": true
+    },
+    "memory_sampling_target": {
+      "ok": true
+    },
+    "model_resident": {
+      "ok": true
+    },
+    "no_contention_during_run": {
+      "ok": true
+    },
+    "no_reload_during_run": {
+      "ok": true
+    },
+    "serving_requested_artifact": {
+      "ok": true
+    }
+  },
+  "artifact_digest": "sha256:2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730",
+  "server_parallel_slots": 1,
+  "host": {
+    "captured_at": "2026-10-02T21:21:43+00:00",
+    "cpu": {
+      "brand": {
+        "method": "sysctl machdep.cpu.brand_string",
+        "value": "Apple M4 Pro"
+      },
+      "efficiency_cores": {
+        "method": "sysctl hw.perflevel1.physicalcpu",
+        "value": 4
+      },
+      "logical_cores": {
+        "method": "sysctl hw.logicalcpu",
+        "value": 12
+      },
+      "performance_cores": {
+        "method": "sysctl hw.perflevel0.physicalcpu",
+        "value": 8
+      }
+    },
+    "gpu": {
+      "cores": {
+        "method": "system_profiler SPDisplaysDataType sppci_cores",
+        "value": 16
+      },
+      "name": {
+        "method": "Apple silicon: the GPU is part of the SoC named by the CPU brand",
+        "value": "Apple M4 Pro"
+      }
+    },
+    "memory": {
+      "free_percent": {
+        "method": "memory_pressure -Q",
+        "value": 27
+      },
+      "kind": "unified",
+      "pressure_level": {
+        "method": "sysctl kern.memorystatus_vm_pressure_level (1 normal, 2 warn, 4 critical)",
+        "value": 2
+      },
+      "total_bytes": {
+        "method": "sysctl hw.memsize",
+        "value": 25769803776
+      }
+    },
+    "os": {
+      "build": "24F74",
+      "machine": "arm64",
+      "product": "macOS",
+      "release": "24.5.0",
+      "system": "Darwin",
+      "version": "15.5"
+    },
+    "harness": {
+      "git_commit": {
+        "method": "git rev-parse HEAD",
+        "value": "3a3aac214ab86fdefb9d1313cf6c2f765c9f5fcb"
+      },
+      "lab_tree_dirty": {
+        "method": "git status --porcelain -- lab/src lab/pyproject.toml (the measuring code)",
+        "value": false
+      },
+      "name": "aiglab",
+      "version": "1.0.0"
+    },
+    "power_source": {
+      "method": "pmset -g batt",
+      "value": "AC Power"
+    }
+  },
+  "confidence": "medium",
+  "confidence_reasons": [
+    "5 included measured repetitions",
+    "host memory pressure level 2 (warn) at run start"
+  ],
+  "environment": {
+    "pressureLevel": 2,
+    "freePercent": 27,
+    "loadAverage1m": 5.86
+  },
+  "warnings": [
+    "Host memory pressure: warning (level 2); free memory 27%; 1-minute load 5.86."
+  ],
+  "failure_summary": [
+    {
+      "category": "checker_failure",
+      "label": "Checker failed",
+      "count": 5
+    }
+  ],
+  "runtime_completion": {
+    "requests_failed": 0,
+    "requests_total": 15,
+    "status": "completed"
+  },
+  "task_success": {
+    "rate": 0.6666666666666666,
+    "tasks_succeeded": 10,
+    "tasks_total": 15
+  },
+  "metrics": {
+    "aggregate_output_tokens_per_s": {
+      "all": {
+        "cv": 0.02188560362569958,
+        "max": 36.62743032077923,
+        "mean": 35.45115715214935,
+        "median": 35.0702089753786,
+        "min": 34.68959756585743,
+        "n": 5,
+        "stdev": 0.7758699735043254
+      },
+      "included": {
+        "cv": 0.02188560362569958,
+        "max": 36.62743032077923,
+        "mean": 35.45115715214935,
+        "median": 35.0702089753786,
+        "min": 34.68959756585743,
+        "n": 5,
+        "stdev": 0.7758699735043254
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 36.62743032077923
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 35.82067691295726
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 35.04787198577422
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 34.68959756585743
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 35.0702089753786
+        }
+      ]
+    },
+    "decode_tokens_per_s": {
+      "all": {
+        "cv": 0.022935262318990134,
+        "max": 45.06338520893203,
+        "mean": 43.730441895609616,
+        "median": 43.31543191329764,
+        "min": 42.82468931707536,
+        "n": 5,
+        "stdev": 1.0029691562011627
+      },
+      "included": {
+        "cv": 0.022935262318990134,
+        "max": 45.06338520893203,
+        "mean": 43.730441895609616,
+        "median": 43.31543191329764,
+        "min": 42.82468931707536,
+        "n": 5,
+        "stdev": 1.0029691562011627
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 45.06338520893203
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 44.516297045379176
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 42.82468931707536
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 42.93240599336388
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 43.31543191329764
+        }
+      ]
+    },
+    "peak_phys_footprint_bytes": {
+      "all": {
+        "cv": 0.07436474166661564,
+        "max": 822083584,
+        "mean": 751409561.6,
+        "median": 750780416,
+        "min": 681574400,
+        "n": 5,
+        "stdev": 55878377.93420891
+      },
+      "included": {
+        "cv": 0.07436474166661564,
+        "max": 822083584,
+        "mean": 751409561.6,
+        "median": 750780416,
+        "min": 681574400,
+        "n": 5,
+        "stdev": 55878377.93420891
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 681574400
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 715128832
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 750780416
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 787480576
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 822083584
+        }
+      ]
+    },
+    "peak_rss_bytes": {
+      "all": {
+        "cv": 0.010625742843180323,
+        "max": 5534105600,
+        "mean": 5461085388.8,
+        "median": 5461131264,
+        "min": 5388009472,
+        "n": 5,
+        "stdev": 58028088.98603823
+      },
+      "included": {
+        "cv": 0.010625742843180323,
+        "max": 5534105600,
+        "mean": 5461085388.8,
+        "median": 5461131264,
+        "min": 5388009472,
+        "n": 5,
+        "stdev": 58028088.98603823
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 5388009472
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 5423693824
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 5461131264
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 5498486784
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 5534105600
+        }
+      ]
+    },
+    "prompt_cached_tokens_total": {
+      "all": {
+        "cv": 0,
+        "max": 190,
+        "mean": 190,
+        "median": 190,
+        "min": 190,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 190,
+        "mean": 190,
+        "median": 190,
+        "min": 190,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 190
+        }
+      ]
+    },
+    "prompt_eval_ms": {
+      "all": {
+        "cv": 0.019380096750956,
+        "max": 199.701,
+        "mean": 195.3206,
+        "median": 195.567,
+        "min": 189.388,
+        "n": 5,
+        "stdev": 3.785332125454777
+      },
+      "included": {
+        "cv": 0.019380096750956,
+        "max": 199.701,
+        "mean": 195.3206,
+        "median": 195.567,
+        "min": 189.388,
+        "n": 5,
+        "stdev": 3.785332125454777
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 189.388
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 194.969
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 196.978
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 199.701
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 195.567
+        }
+      ]
+    },
+    "prompt_tokens_max": {
+      "all": {
+        "cv": 0,
+        "max": 151,
+        "mean": 151,
+        "median": 151,
+        "min": 151,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 151,
+        "mean": 151,
+        "median": 151,
+        "min": 151,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 151
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 151
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 151
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 151
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 151
+        }
+      ]
+    },
+    "rep_wall_s": {
+      "all": {
+        "cv": 0.021610092886457297,
+        "max": 5.18887541598815,
+        "mean": 5.079329924992635,
+        "median": 5.132561374994111,
+        "min": 4.9143496670003515,
+        "n": 5,
+        "stdev": 0.10976479148005301
+      },
+      "included": {
+        "cv": 0.021610092886457297,
+        "max": 5.18887541598815,
+        "mean": 5.079329924992635,
+        "median": 5.132561374994111,
+        "min": 4.9143496670003515,
+        "n": 5,
+        "stdev": 0.10976479148005301
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 4.9143496670003515
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 5.02503066699137
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 5.135832499989192
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 5.18887541598815
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 5.132561374994111
+        }
+      ]
+    },
+    "success_rate": {
+      "all": {
+        "cv": 0,
+        "max": 0.6666666666666666,
+        "mean": 0.6666666666666666,
+        "median": 0.6666666666666666,
+        "min": 0.6666666666666666,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 0.6666666666666666,
+        "mean": 0.6666666666666666,
+        "median": 0.6666666666666666,
+        "min": 0.6666666666666666,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "fraction",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 0.6666666666666666
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 0.6666666666666666
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 0.6666666666666666
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 0.6666666666666666
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 0.6666666666666666
+        }
+      ]
+    },
+    "task_completion_s": {
+      "all": {
+        "cv": 0.012934168839587111,
+        "max": 1.5933445419941563,
+        "mean": 1.5658897584013176,
+        "median": 1.5580125420092372,
+        "min": 1.5468226249940926,
+        "n": 5,
+        "stdev": 0.020253482519342912
+      },
+      "included": {
+        "cv": 0.012934168839587111,
+        "max": 1.5933445419941563,
+        "mean": 1.5658897584013176,
+        "median": 1.5580125420092372,
+        "min": 1.5468226249940926,
+        "n": 5,
+        "stdev": 0.020253482519342912
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1.55044716699922
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1.5468226249940926
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1.5808219160098815
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1.5933445419941563
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1.5580125420092372
+        }
+      ]
+    },
+    "tool_latency_ms": {
+      "status": "unavailable",
+      "unit": "ms"
+    },
+    "ttft_ms": {
+      "all": {
+        "cv": 0.021389764732389877,
+        "max": 206.32712500810158,
+        "mean": 200.66360019845888,
+        "median": 201.39383399509825,
+        "min": 194.62966699211393,
+        "n": 5,
+        "stdev": 4.292147198599378
+      },
+      "included": {
+        "cv": 0.021389764732389877,
+        "max": 206.32712500810158,
+        "mean": 200.66360019845888,
+        "median": 201.39383399509825,
+        "min": 194.62966699211393,
+        "n": 5,
+        "stdev": 4.292147198599378
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 194.62966699211393
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 198.965749994386
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 202.00162500259466
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 206.32712500810158
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 201.39383399509825
+        }
+      ]
+    }
+  },
+  "repetitions": [
+    {
+      "index": -1,
+      "phase": "warmup",
+      "wall_s": 4.915910125011578,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 36.615803670653165,
+        "decode_tokens_per_s": 44.86048389508628,
+        "peak_phys_footprint_bytes": 643825664,
+        "peak_rss_bytes": 5348573184,
+        "prompt_cached_tokens_total": 179,
+        "prompt_eval_ms": 182.01,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 4.915910125011578,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.530448207995505,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 190.01783299609087,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 643825664
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 20,
+          "status": "measured",
+          "value_bytes": 5348573184
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1783.9847919967724,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1361.898,
+              "decode_tokens_per_s": 46.25897093614941,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 1.204459,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 3,
+              "prompt_eval_ms": 416.87,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1782.426292,
+              "started_at": "2026-10-02T21:21:46.161+00:00",
+              "ttft_ms": 421.88404200715013,
+              "wall_ms": 1783.8912500010338
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1530.448207995505,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1347.724,
+              "decode_tokens_per_s": 42.293525974160886,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 0.891292,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 177.939,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1529.341,
+              "started_at": "2026-10-02T21:21:47.945+00:00",
+              "ttft_ms": 182.430208005826,
+              "wall_ms": 1530.3279999934603
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1527.6618750067428,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1337.48,
+              "decode_tokens_per_s": 44.86048389508628,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 1.769834,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 182.01,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1525.679459,
+              "started_at": "2026-10-02T21:21:49.476+00:00",
+              "ttft_ms": 190.01783299609087,
+              "wall_ms": 1527.5246660021367
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "phase": "measured",
+      "wall_s": 4.9143496670003515,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 36.62743032077923,
+        "decode_tokens_per_s": 45.06338520893203,
+        "peak_phys_footprint_bytes": 681574400,
+        "peak_rss_bytes": 5388009472,
+        "prompt_cached_tokens_total": 190,
+        "prompt_eval_ms": 189.388,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 4.9143496670003515,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.55044716699922,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 194.62966699211393,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 681574400
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 20,
+          "status": "measured",
+          "value_bytes": 5388009472
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1831.5971249976428,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1359.348,
+              "decode_tokens_per_s": 46.34574810865209,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 9.9295,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 14,
+              "prompt_eval_ms": 451.981,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1830.164209,
+              "started_at": "2026-10-02T21:21:51.077+00:00",
+              "ttft_ms": 472.57974999956787,
+              "wall_ms": 1831.4677090093028
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1455.348250005045,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1264.885,
+              "decode_tokens_per_s": 45.06338520893203,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 0.962417,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 185.823,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1454.46775,
+              "started_at": "2026-10-02T21:21:52.908+00:00",
+              "ttft_ms": 190.3685410070466,
+              "wall_ms": 1455.2637500019046
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1550.44716699922,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1355.751,
+              "decode_tokens_per_s": 44.25591424974055,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 1.00375,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 189.388,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1548.867959,
+              "started_at": "2026-10-02T21:21:54.364+00:00",
+              "ttft_ms": 194.62966699211393,
+              "wall_ms": 1550.265625002794
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "wall_s": 5.02503066699137,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 35.82067691295726,
+        "decode_tokens_per_s": 44.516297045379176,
+        "peak_phys_footprint_bytes": 715128832,
+        "peak_rss_bytes": 5423693824,
+        "prompt_cached_tokens_total": 190,
+        "prompt_eval_ms": 194.969,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 5.02503066699137,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.5468226249940926,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 198.965749994386,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 715128832
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 21,
+          "status": "measured",
+          "value_bytes": 5423693824
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1872.7484169939999,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1399.044,
+              "decode_tokens_per_s": 45.03074956899139,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 2.773625,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 14,
+              "prompt_eval_ms": 461.936,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1871.294708,
+              "started_at": "2026-10-02T21:21:55.991+00:00",
+              "ttft_ms": 474.12662499118596,
+              "wall_ms": 1872.6356249972014
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1536.465290992055,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1338.292,
+              "decode_tokens_per_s": 42.59160183278388,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 2.405667,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 191.534,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1535.481125,
+              "started_at": "2026-10-02T21:21:57.864+00:00",
+              "ttft_ms": 198.10029199288692,
+              "wall_ms": 1536.3556249940302
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1546.8226249940926,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1347.821,
+              "decode_tokens_per_s": 44.516297045379176,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 0.792583,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 194.969,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1545.918333,
+              "started_at": "2026-10-02T21:21:59.400+00:00",
+              "ttft_ms": 198.965749994386,
+              "wall_ms": 1546.7213749943767
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "wall_s": 5.135832499989192,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 35.04787198577422,
+        "decode_tokens_per_s": 42.82468931707536,
+        "peak_phys_footprint_bytes": 750780416,
+        "peak_rss_bytes": 5461131264,
+        "prompt_cached_tokens_total": 190,
+        "prompt_eval_ms": 196.978,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 5.135832499989192,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.5808219160098815,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 202.00162500259466,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 750780416
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 21,
+          "status": "measured",
+          "value_bytes": 5461131264
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1955.4457920021378,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1471.114,
+              "decode_tokens_per_s": 42.82468931707536,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 2.75925,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 14,
+              "prompt_eval_ms": 473.19,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1953.357291,
+              "started_at": "2026-10-02T21:22:01.016+00:00",
+              "ttft_ms": 484.64570799842477,
+              "wall_ms": 1955.3399160067784
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1534.2965000018012,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1332.056,
+              "decode_tokens_per_s": 42.7909937720336,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 1.181666,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 196.408,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1532.648166,
+              "started_at": "2026-10-02T21:22:02.972+00:00",
+              "ttft_ms": 201.84120800695382,
+              "wall_ms": 1534.141374999308
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1580.8219160098815,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1378.715,
+              "decode_tokens_per_s": 43.51878379505554,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 0.994541,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 196.978,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1579.27575,
+              "started_at": "2026-10-02T21:22:04.507+00:00",
+              "ttft_ms": 202.00162500259466,
+              "wall_ms": 1580.6349579943344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "wall_s": 5.18887541598815,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 34.68959756585743,
+        "decode_tokens_per_s": 42.93240599336388,
+        "peak_phys_footprint_bytes": 787480576,
+        "peak_rss_bytes": 5498486784,
+        "prompt_cached_tokens_total": 190,
+        "prompt_eval_ms": 199.701,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 5.18887541598815,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.5933445419941563,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 206.32712500810158,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 787480576
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 21,
+          "status": "measured",
+          "value_bytes": 5498486784
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1957.1266250131885,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1467.423,
+              "decode_tokens_per_s": 42.93240599336388,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 3.473083,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 14,
+              "prompt_eval_ms": 478.847,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1955.525875,
+              "started_at": "2026-10-02T21:22:06.152+00:00",
+              "ttft_ms": 489.99966600968037,
+              "wall_ms": 1957.042583002476
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1593.3445419941563,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1389.335,
+              "decode_tokens_per_s": 41.02682218471427,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 0.948125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 199.087,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1592.415875,
+              "started_at": "2026-10-02T21:22:08.110+00:00",
+              "ttft_ms": 203.6216249980498,
+              "wall_ms": 1593.25487499882
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1571.47295899631,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1365.042,
+              "decode_tokens_per_s": 43.95469150399769,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 1.429459,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 199.701,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1570.351042,
+              "started_at": "2026-10-02T21:22:09.703+00:00",
+              "ttft_ms": 206.32712500810158,
+              "wall_ms": 1571.3660409965087
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "phase": "measured",
+      "wall_s": 5.132561374994111,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 35.0702089753786,
+        "decode_tokens_per_s": 43.31543191329764,
+        "peak_phys_footprint_bytes": 822083584,
+        "peak_rss_bytes": 5534105600,
+        "prompt_cached_tokens_total": 190,
+        "prompt_eval_ms": 195.567,
+        "prompt_tokens_max": 151,
+        "rep_wall_s": 5.132561374994111,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.6666666666666666,
+        "task_completion_s": 1.5580125420092372,
+        "tasks_succeeded": 2,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 201.39383399509825,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 4,
+          "status": "measured",
+          "value_bytes": 822083584
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 21,
+          "status": "measured",
+          "value_bytes": 5534105600
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": false,
+          "task_id": "refund",
+          "wall_ms": 1941.6657499969006,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 63,
+              "decode_ms": 1454.447,
+              "decode_tokens_per_s": 43.31543191329764,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "refund#lane0",
+              "load_ms": 2.480125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 14,
+              "prompt_eval_ms": 476.589,
+              "prompt_tokens": 151,
+              "runtime_total_ms": 1939.928416,
+              "started_at": "2026-10-02T21:22:11.341+00:00",
+              "ttft_ms": 487.59858300036285,
+              "wall_ms": 1941.5787080070004
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "replace",
+          "wall_ms": 1558.0125420092372,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 57,
+              "decode_ms": 1358.167,
+              "decode_tokens_per_s": 41.968329373339216,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "replace#lane0",
+              "load_ms": 0.806083,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 195.567,
+              "prompt_tokens": 143,
+              "runtime_total_ms": 1557.06275,
+              "started_at": "2026-10-02T21:22:13.283+00:00",
+              "ttft_ms": 199.49158300005365,
+              "wall_ms": 1557.8917500097305
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "cancel",
+          "wall_ms": 1555.220291003934,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1353.721,
+              "decode_tokens_per_s": 44.32227911068824,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "cancel#lane0",
+              "load_ms": 1.43525,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 88,
+              "prompt_eval_ms": 195.041,
+              "prompt_tokens": 149,
+              "runtime_total_ms": 1554.08125,
+              "started_at": "2026-10-02T21:22:14.841+00:00",
+              "ttft_ms": 201.39383399509825,
+              "wall_ms": 1555.1057919947198
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "memory_samples": {
+    "measured-0": {
+      "phys_footprint": [
+        [
+          0.066,
+          655360000
+        ],
+        [
+          2.142,
+          668991488
+        ],
+        [
+          4.221,
+          681574400
+        ],
+        [
+          4.914,
+          681574400
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5348360192
+        ],
+        [
+          0.262,
+          5360418816
+        ],
+        [
+          0.522,
+          5360418816
+        ],
+        [
+          0.782,
+          5360418816
+        ],
+        [
+          1.054,
+          5360418816
+        ],
+        [
+          1.313,
+          5360418816
+        ],
+        [
+          1.571,
+          5360418816
+        ],
+        [
+          1.829,
+          5360418816
+        ],
+        [
+          2.088,
+          5374574592
+        ],
+        [
+          2.352,
+          5374574592
+        ],
+        [
+          2.616,
+          5374574592
+        ],
+        [
+          2.875,
+          5374574592
+        ],
+        [
+          3.136,
+          5374574592
+        ],
+        [
+          3.399,
+          5386125312
+        ],
+        [
+          3.655,
+          5388009472
+        ],
+        [
+          3.919,
+          5388009472
+        ],
+        [
+          4.179,
+          5388009472
+        ],
+        [
+          4.439,
+          5388009472
+        ],
+        [
+          4.702,
+          5388009472
+        ],
+        [
+          4.849,
+          5388009472
+        ]
+      ]
+    },
+    "measured-1": {
+      "phys_footprint": [
+        [
+          0.048,
+          691011584
+        ],
+        [
+          2.125,
+          703594496
+        ],
+        [
+          4.202,
+          715128832
+        ],
+        [
+          5.025,
+          715128832
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5388009472
+        ],
+        [
+          0.262,
+          5400018944
+        ],
+        [
+          0.521,
+          5400018944
+        ],
+        [
+          0.79,
+          5400035328
+        ],
+        [
+          1.049,
+          5400035328
+        ],
+        [
+          1.311,
+          5400035328
+        ],
+        [
+          1.571,
+          5400018944
+        ],
+        [
+          1.829,
+          5400018944
+        ],
+        [
+          2.088,
+          5412274176
+        ],
+        [
+          2.346,
+          5412274176
+        ],
+        [
+          2.608,
+          5412274176
+        ],
+        [
+          2.871,
+          5412274176
+        ],
+        [
+          3.133,
+          5412274176
+        ],
+        [
+          3.392,
+          5412274176
+        ],
+        [
+          3.653,
+          5423693824
+        ],
+        [
+          3.911,
+          5423693824
+        ],
+        [
+          4.167,
+          5423693824
+        ],
+        [
+          4.43,
+          5423693824
+        ],
+        [
+          4.688,
+          5423693824
+        ],
+        [
+          4.948,
+          5423693824
+        ],
+        [
+          4.962,
+          5423693824
+        ]
+      ]
+    },
+    "measured-2": {
+      "phys_footprint": [
+        [
+          0.055,
+          726663168
+        ],
+        [
+          2.12,
+          739246080
+        ],
+        [
+          4.202,
+          750780416
+        ],
+        [
+          5.136,
+          750780416
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          5423693824
+        ],
+        [
+          0.257,
+          5435654144
+        ],
+        [
+          0.516,
+          5435654144
+        ],
+        [
+          0.77,
+          5435654144
+        ],
+        [
+          1.029,
+          5435654144
+        ],
+        [
+          1.288,
+          5435654144
+        ],
+        [
+          1.547,
+          5435654144
+        ],
+        [
+          1.807,
+          5435654144
+        ],
+        [
+          2.068,
+          5447876608
+        ],
+        [
+          2.328,
+          5449711616
+        ],
+        [
+          2.591,
+          5449711616
+        ],
+        [
+          2.855,
+          5449711616
+        ],
+        [
+          3.116,
+          5449711616
+        ],
+        [
+          3.38,
+          5449711616
+        ],
+        [
+          3.64,
+          5461131264
+        ],
+        [
+          3.903,
+          5461131264
+        ],
+        [
+          4.162,
+          5461131264
+        ],
+        [
+          4.423,
+          5461131264
+        ],
+        [
+          4.683,
+          5461131264
+        ],
+        [
+          4.944,
+          5461131264
+        ],
+        [
+          5.08,
+          5461131264
+        ]
+      ]
+    },
+    "measured-3": {
+      "phys_footprint": [
+        [
+          0.058,
+          762314752
+        ],
+        [
+          2.125,
+          774897664
+        ],
+        [
+          4.215,
+          787480576
+        ],
+        [
+          5.189,
+          787480576
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5461131264
+        ],
+        [
+          0.264,
+          5473075200
+        ],
+        [
+          0.521,
+          5473075200
+        ],
+        [
+          0.781,
+          5473075200
+        ],
+        [
+          1.041,
+          5473075200
+        ],
+        [
+          1.299,
+          5473075200
+        ],
+        [
+          1.561,
+          5473075200
+        ],
+        [
+          1.832,
+          5473075200
+        ],
+        [
+          2.087,
+          5485297664
+        ],
+        [
+          2.35,
+          5485297664
+        ],
+        [
+          2.612,
+          5485297664
+        ],
+        [
+          2.875,
+          5485264896
+        ],
+        [
+          3.139,
+          5485264896
+        ],
+        [
+          3.404,
+          5485232128
+        ],
+        [
+          3.667,
+          5496668160
+        ],
+        [
+          3.928,
+          5498486784
+        ],
+        [
+          4.183,
+          5498486784
+        ],
+        [
+          4.446,
+          5498486784
+        ],
+        [
+          4.704,
+          5498486784
+        ],
+        [
+          4.965,
+          5498486784
+        ],
+        [
+          5.131,
+          5498486784
+        ]
+      ]
+    },
+    "measured-4": {
+      "phys_footprint": [
+        [
+          0.062,
+          797966336
+        ],
+        [
+          2.133,
+          810549248
+        ],
+        [
+          4.211,
+          822083584
+        ],
+        [
+          5.133,
+          822083584
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          5498486784
+        ],
+        [
+          0.263,
+          5510447104
+        ],
+        [
+          0.526,
+          5510463488
+        ],
+        [
+          0.788,
+          5510463488
+        ],
+        [
+          1.048,
+          5510463488
+        ],
+        [
+          1.307,
+          5510463488
+        ],
+        [
+          1.568,
+          5510463488
+        ],
+        [
+          1.83,
+          5510463488
+        ],
+        [
+          2.088,
+          5522685952
+        ],
+        [
+          2.347,
+          5522669568
+        ],
+        [
+          2.611,
+          5522669568
+        ],
+        [
+          2.87,
+          5522669568
+        ],
+        [
+          3.138,
+          5522669568
+        ],
+        [
+          3.396,
+          5522669568
+        ],
+        [
+          3.659,
+          5534089216
+        ],
+        [
+          3.922,
+          5534089216
+        ],
+        [
+          4.178,
+          5534089216
+        ],
+        [
+          4.441,
+          5534089216
+        ],
+        [
+          4.706,
+          5534089216
+        ],
+        [
+          4.971,
+          5534089216
+        ],
+        [
+          5.065,
+          5534105600
+        ]
+      ]
+    },
+    "warmup--1": {
+      "phys_footprint": [
+        [
+          0.056,
+          618659840
+        ],
+        [
+          2.121,
+          633339904
+        ],
+        [
+          4.194,
+          643825664
+        ],
+        [
+          4.916,
+          643825664
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          5314560000
+        ],
+        [
+          0.263,
+          5320310784
+        ],
+        [
+          0.522,
+          5322227712
+        ],
+        [
+          0.783,
+          5322457088
+        ],
+        [
+          1.037,
+          5322457088
+        ],
+        [
+          1.299,
+          5322473472
+        ],
+        [
+          1.564,
+          5322899456
+        ],
+        [
+          1.825,
+          5335416832
+        ],
+        [
+          2.083,
+          5337006080
+        ],
+        [
+          2.34,
+          5337055232
+        ],
+        [
+          2.604,
+          5337071616
+        ],
+        [
+          2.869,
+          5337071616
+        ],
+        [
+          3.129,
+          5337006080
+        ],
+        [
+          3.393,
+          5348573184
+        ],
+        [
+          3.65,
+          5348491264
+        ],
+        [
+          3.913,
+          5348458496
+        ],
+        [
+          4.176,
+          5348360192
+        ],
+        [
+          4.438,
+          5348360192
+        ],
+        [
+          4.7,
+          5348360192
+        ],
+        [
+          4.852,
+          5348360192
+        ]
+      ]
+    }
+  }
+}

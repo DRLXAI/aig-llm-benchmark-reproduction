@@ -1,0 +1,2041 @@
+{
+  "schema": "aig.public-measurement-extract/1",
+  "notice": "Allowlisted extract, not an unchanged original. Local paths, endpoints, process IDs, generated content and free-text runtime errors are omitted. Numeric measurements are unchanged. Public checksums cover these extracts, not the original seal.",
+  "source_seal_digest": "sha256:e0321980ad5a4a4174bf6784179f71004feeb3a6b4d59964d8f4a03b3931056c",
+  "run_id": "20261002T212119Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx32k-c1-rag-06579dcd",
+  "model": {
+    "artifact_size_gb": 4.68,
+    "family": "Qwen2.5",
+    "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+    "name": "Qwen2.5 7B Instruct",
+    "parameter_size": "7.6B",
+    "quantization": "Q4_K_M",
+    "runtime_ref": "qwen2.5:7b-instruct"
+  },
+  "hardware": {
+    "chip": "Apple M4 Pro",
+    "lab_key": "apple-m4-pro-24gb",
+    "memory_gib": 24,
+    "memory_kind": "unified",
+    "os": "macOS 15.5"
+  },
+  "runtime": {
+    "id": "ollama",
+    "server_parallel_slots": 1,
+    "version": "0.35.0"
+  },
+  "tested_at": "2026-10-02",
+  "methodology_version": "1.0.0",
+  "config": {
+    "concurrency": 1,
+    "context": 32768,
+    "max_output_tokens": 1024,
+    "seed": 42,
+    "temperature": 0
+  },
+  "workload": {
+    "definition_sha256": "aa821c4636b5d6b8b81dd8a56de2e2f93131ac47a72141225d7332756e1a1565",
+    "id": "rag",
+    "version": "1.0.0"
+  },
+  "identity_checks": {
+    "artifact_hash": {
+      "ok": true
+    },
+    "effective_context": {
+      "ok": true
+    },
+    "manifest_digest": {
+      "ok": true
+    },
+    "memory_sampling_target": {
+      "ok": true
+    },
+    "model_resident": {
+      "ok": true
+    },
+    "no_contention_during_run": {
+      "ok": true
+    },
+    "no_reload_during_run": {
+      "ok": true
+    },
+    "serving_requested_artifact": {
+      "ok": true
+    }
+  },
+  "artifact_digest": "sha256:2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730",
+  "server_parallel_slots": 1,
+  "host": {
+    "captured_at": "2026-10-02T21:21:19+00:00",
+    "cpu": {
+      "brand": {
+        "method": "sysctl machdep.cpu.brand_string",
+        "value": "Apple M4 Pro"
+      },
+      "efficiency_cores": {
+        "method": "sysctl hw.perflevel1.physicalcpu",
+        "value": 4
+      },
+      "logical_cores": {
+        "method": "sysctl hw.logicalcpu",
+        "value": 12
+      },
+      "performance_cores": {
+        "method": "sysctl hw.perflevel0.physicalcpu",
+        "value": 8
+      }
+    },
+    "gpu": {
+      "cores": {
+        "method": "system_profiler SPDisplaysDataType sppci_cores",
+        "value": 16
+      },
+      "name": {
+        "method": "Apple silicon: the GPU is part of the SoC named by the CPU brand",
+        "value": "Apple M4 Pro"
+      }
+    },
+    "memory": {
+      "free_percent": {
+        "method": "memory_pressure -Q",
+        "value": 35
+      },
+      "kind": "unified",
+      "pressure_level": {
+        "method": "sysctl kern.memorystatus_vm_pressure_level (1 normal, 2 warn, 4 critical)",
+        "value": 2
+      },
+      "total_bytes": {
+        "method": "sysctl hw.memsize",
+        "value": 25769803776
+      }
+    },
+    "os": {
+      "build": "24F74",
+      "machine": "arm64",
+      "product": "macOS",
+      "release": "24.5.0",
+      "system": "Darwin",
+      "version": "15.5"
+    },
+    "harness": {
+      "git_commit": {
+        "method": "git rev-parse HEAD",
+        "value": "3a3aac214ab86fdefb9d1313cf6c2f765c9f5fcb"
+      },
+      "lab_tree_dirty": {
+        "method": "git status --porcelain -- lab/src lab/pyproject.toml (the measuring code)",
+        "value": false
+      },
+      "name": "aiglab",
+      "version": "1.0.0"
+    },
+    "power_source": {
+      "method": "pmset -g batt",
+      "value": "AC Power"
+    }
+  },
+  "confidence": "medium",
+  "confidence_reasons": [
+    "5 included measured repetitions",
+    "decode_tokens_per_s has flagged outliers [3]"
+  ],
+  "environment": {
+    "pressureLevel": 2,
+    "freePercent": 35,
+    "loadAverage1m": 4.32
+  },
+  "warnings": [
+    "decode_tokens_per_s has flagged outliers [3]",
+    "Host memory pressure: warning (level 2); free memory 35%; 1-minute load 4.32."
+  ],
+  "failure_summary": [],
+  "runtime_completion": {
+    "requests_failed": 0,
+    "requests_total": 15,
+    "status": "completed"
+  },
+  "task_success": {
+    "rate": 1,
+    "tasks_succeeded": 15,
+    "tasks_total": 15
+  },
+  "metrics": {
+    "aggregate_output_tokens_per_s": {
+      "all": {
+        "cv": 0.027039781698608007,
+        "max": 26.101149194629905,
+        "mean": 25.44048311332013,
+        "median": 25.71708557824181,
+        "min": 24.365417375691873,
+        "n": 5,
+        "stdev": 0.6879051096912997
+      },
+      "included": {
+        "cv": 0.027039781698608007,
+        "max": 26.101149194629905,
+        "mean": 25.44048311332013,
+        "median": 25.71708557824181,
+        "min": 24.365417375691873,
+        "n": 5,
+        "stdev": 0.6879051096912997
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 25.836952153322517
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 26.101149194629905
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 25.71708557824181
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 24.365417375691873
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 25.181811264714547
+        }
+      ]
+    },
+    "decode_tokens_per_s": {
+      "all": {
+        "cv": 0.04409586649090601,
+        "max": 45.628894497440506,
+        "mean": 44.350405802333704,
+        "median": 45.17361726903734,
+        "min": 40.88542498482767,
+        "n": 5,
+        "stdev": 1.9556695730772102
+      },
+      "included": {
+        "cv": 0.04409586649090601,
+        "max": 45.628894497440506,
+        "mean": 44.350405802333704,
+        "median": 45.17361726903734,
+        "min": 40.88542498482767,
+        "n": 5,
+        "stdev": 1.9556695730772102
+      },
+      "outliers": [
+        3
+      ],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 45.17361726903734
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 45.628894497440506
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 45.19174007970693
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 3,
+          "value": 40.88542498482767
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 44.87235218065609
+        }
+      ]
+    },
+    "peak_phys_footprint_bytes": {
+      "all": {
+        "cv": 0.025578272956847826,
+        "max": 2254438400,
+        "mean": 2184603238.4,
+        "median": 2185232384,
+        "min": 2113929216,
+        "n": 5,
+        "stdev": 55878377.93420891
+      },
+      "included": {
+        "cv": 0.025578272956847826,
+        "max": 2254438400,
+        "mean": 2184603238.4,
+        "median": 2185232384,
+        "min": 2113929216,
+        "n": 5,
+        "stdev": 55878377.93420891
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 2113929216
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 2148532224
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 2185232384
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 2220883968
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 2254438400
+        }
+      ]
+    },
+    "peak_rss_bytes": {
+      "all": {
+        "cv": 0.003810902021523947,
+        "max": 6746423296,
+        "mean": 6711246848,
+        "median": 6709084160,
+        "min": 6683557888,
+        "n": 5,
+        "stdev": 25575904.179989416
+      },
+      "included": {
+        "cv": 0.003810902021523947,
+        "max": 6746423296,
+        "mean": 6711246848,
+        "median": 6709084160,
+        "min": 6683557888,
+        "n": 5,
+        "stdev": 25575904.179989416
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 6691356672
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 6725812224
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 6746423296
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 6683557888
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 6709084160
+        }
+      ]
+    },
+    "prompt_cached_tokens_total": {
+      "all": {
+        "cv": 0,
+        "max": 125,
+        "mean": 125,
+        "median": 125,
+        "min": 125,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 125,
+        "mean": 125,
+        "median": 125,
+        "min": 125,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 125
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 125
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 125
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 125
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 125
+        }
+      ]
+    },
+    "prompt_eval_ms": {
+      "all": {
+        "cv": 0.021791463210794053,
+        "max": 435.499,
+        "mean": 421.523,
+        "median": 415.82,
+        "min": 414.685,
+        "n": 5,
+        "stdev": 9.185602947003542
+      },
+      "included": {
+        "cv": 0.021791463210794053,
+        "max": 435.499,
+        "mean": 421.523,
+        "median": 415.82,
+        "min": 414.685,
+        "n": 5,
+        "stdev": 9.185602947003542
+      },
+      "outliers": [
+        3,
+        4
+      ],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 415.244
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 414.685
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 415.82
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 3,
+          "value": 426.367
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 4,
+          "value": 435.499
+        }
+      ]
+    },
+    "prompt_tokens_max": {
+      "all": {
+        "cv": 0,
+        "max": 190,
+        "mean": 190,
+        "median": 190,
+        "min": 190,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 190,
+        "mean": 190,
+        "median": 190,
+        "min": 190,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 190
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 190
+        }
+      ]
+    },
+    "rep_wall_s": {
+      "all": {
+        "cv": 0.027562452322346113,
+        "max": 3.3654256250010803,
+        "mean": 3.22513180039532,
+        "median": 3.1885417089943076,
+        "min": 3.141624124997179,
+        "n": 5,
+        "stdev": 0.08889254148167829
+      },
+      "included": {
+        "cv": 0.027562452322346113,
+        "max": 3.3654256250010803,
+        "mean": 3.22513180039532,
+        "median": 3.1885417089943076,
+        "min": 3.141624124997179,
+        "n": 5,
+        "stdev": 0.08889254148167829
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 3.1737489589868346
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 3.141624124997179
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 3.1885417089943076
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 3.3654256250010803
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 3.2563185839971993
+        }
+      ]
+    },
+    "success_rate": {
+      "all": {
+        "cv": 0,
+        "max": 1,
+        "mean": 1,
+        "median": 1,
+        "min": 1,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 1,
+        "mean": 1,
+        "median": 1,
+        "min": 1,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "fraction",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1
+        }
+      ]
+    },
+    "task_completion_s": {
+      "all": {
+        "cv": 0.017492821169141817,
+        "max": 1.1596312080073403,
+        "mean": 1.1290728918014792,
+        "median": 1.128220375001547,
+        "min": 1.1095339589955984,
+        "n": 5,
+        "stdev": 0.019750670183209085
+      },
+      "included": {
+        "cv": 0.017492821169141817,
+        "max": 1.1596312080073403,
+        "mean": 1.1290728918014792,
+        "median": 1.128220375001547,
+        "min": 1.1095339589955984,
+        "n": 5,
+        "stdev": 0.019750670183209085
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1.114182167002582
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1.1095339589955984
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1.1337967500003288
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1.1596312080073403
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1.128220375001547
+        }
+      ]
+    },
+    "tool_latency_ms": {
+      "all": {
+        "cv": 0.424006238647456,
+        "max": 0.19033398712053895,
+        "mean": 0.12750840396620333,
+        "median": 0.12491700181271881,
+        "min": 0.054500007536262274,
+        "n": 5,
+        "stdev": 0.054064358761650236
+      },
+      "included": {
+        "cv": 0.424006238647456,
+        "max": 0.19033398712053895,
+        "mean": 0.12750840396620333,
+        "median": 0.12491700181271881,
+        "min": 0.054500007536262274,
+        "n": 5,
+        "stdev": 0.054064358761650236
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 0.054500007536262274
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 0.09979101014323533
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 0.1680000132182613
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 0.12491700181271881
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 0.19033398712053895
+        }
+      ]
+    },
+    "ttft_ms": {
+      "all": {
+        "cv": 0.021789535121811424,
+        "max": 440.96970799728297,
+        "mean": 427.75814160122536,
+        "median": 423.451708003995,
+        "min": 419.9852500023553,
+        "n": 5,
+        "stdev": 9.320651050060684
+      },
+      "included": {
+        "cv": 0.021789535121811424,
+        "max": 440.96970799728297,
+        "mean": 427.75814160122536,
+        "median": 423.451708003995,
+        "min": 419.9852500023553,
+        "n": 5,
+        "stdev": 9.320651050060684
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 420.3601670014905
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 419.9852500023553
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 423.451708003995
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 434.02387500100303
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 440.96970799728297
+        }
+      ]
+    }
+  },
+  "repetitions": [
+    {
+      "index": -1,
+      "phase": "warmup",
+      "wall_s": 3.182289916992886,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 25.76760827545409,
+        "decode_tokens_per_s": 44.30071324148319,
+        "peak_phys_footprint_bytes": 2077229056,
+        "peak_rss_bytes": 6682755072,
+        "prompt_cached_tokens_total": 113,
+        "prompt_eval_ms": 415.834,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.182289916992886,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.144868041999871,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.3489160008030012,
+        "ttft_ms": 423.107082999195,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2077229056
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 13,
+          "status": "measured",
+          "value_bytes": 6682755072
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1144.868041999871,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 624.077,
+              "decode_tokens_per_s": 43.26389211587673,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 5.63625,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 3,
+              "prompt_eval_ms": 507.624,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1142.927542,
+              "started_at": "2026-10-02T21:21:23.563+00:00",
+              "ttft_ms": 520.4532089992426,
+              "wall_ms": 1144.3555840087356
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 816.7385830020066,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 474.75,
+              "decode_tokens_per_s": 48.44655081621906,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 1.593416,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 333.401,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 814.098666,
+              "started_at": "2026-10-02T21:21:24.709+00:00",
+              "ttft_ms": 340.6156249984633,
+              "wall_ms": 815.8124580077128
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1145.8796250080923,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 722.336,
+              "decode_tokens_per_s": 44.30071324148319,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 1.471208,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 415.834,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1144.164541,
+              "started_at": "2026-10-02T21:21:25.526+00:00",
+              "ttft_ms": 423.107082999195,
+              "wall_ms": 1145.22874999966
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "phase": "measured",
+      "wall_s": 3.1737489589868346,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 25.836952153322517,
+        "decode_tokens_per_s": 45.17361726903734,
+        "peak_phys_footprint_bytes": 2113929216,
+        "peak_rss_bytes": 6691356672,
+        "prompt_cached_tokens_total": 125,
+        "prompt_eval_ms": 415.244,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.1737489589868346,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.114182167002582,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.054500007536262274,
+        "ttft_ms": 420.3601670014905,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2113929216
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 13,
+          "status": "measured",
+          "value_bytes": 6691356672
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1115.7707499951357,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 597.694,
+              "decode_tokens_per_s": 45.17361726903734,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 3.4655,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 500.918,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1113.1355,
+              "started_at": "2026-10-02T21:21:26.744+00:00",
+              "ttft_ms": 517.8193750034552,
+              "wall_ms": 1115.6269159982912
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 867.7590420120396,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 525.166,
+              "decode_tokens_per_s": 43.79567603386358,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 3.655792,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 333.682,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 866.6905,
+              "started_at": "2026-10-02T21:21:27.860+00:00",
+              "ttft_ms": 342.31091699621174,
+              "wall_ms": 867.4757499975385
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1114.182167002582,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 693.332,
+              "decode_tokens_per_s": 46.153934911413295,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 0.922125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 415.244,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1112.209708,
+              "started_at": "2026-10-02T21:21:28.728+00:00",
+              "ttft_ms": 420.3601670014905,
+              "wall_ms": 1113.5933329933323
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "wall_s": 3.141624124997179,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 26.101149194629905,
+        "decode_tokens_per_s": 45.628894497440506,
+        "peak_phys_footprint_bytes": 2148532224,
+        "peak_rss_bytes": 6725812224,
+        "prompt_cached_tokens_total": 125,
+        "prompt_eval_ms": 414.685,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.141624124997179,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.1095339589955984,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.09979101014323533,
+        "ttft_ms": 419.9852500023553,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2148532224
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 13,
+          "status": "measured",
+          "value_bytes": 6725812224
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1109.5339589955984,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 589.244,
+              "decode_tokens_per_s": 45.821425419690314,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 3.671042,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 506.893,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1107.913875,
+              "started_at": "2026-10-02T21:21:29.919+00:00",
+              "ttft_ms": 520.0230830087094,
+              "wall_ms": 1109.261833000346
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 847.1774999925401,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 506.861,
+              "decode_tokens_per_s": 45.377332246907926,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 1.5675,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 333.069,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 846.048375,
+              "started_at": "2026-10-02T21:21:31.028+00:00",
+              "ttft_ms": 340.5678330018418,
+              "wall_ms": 846.9164999987697
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1121.240124994074,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 701.31,
+              "decode_tokens_per_s": 45.628894497440506,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 1.318709,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 414.685,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1119.831209,
+              "started_at": "2026-10-02T21:21:31.876+00:00",
+              "ttft_ms": 419.9852500023553,
+              "wall_ms": 1120.85529199976
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "wall_s": 3.1885417089943076,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 25.71708557824181,
+        "decode_tokens_per_s": 45.19174007970693,
+        "peak_phys_footprint_bytes": 2185232384,
+        "peak_rss_bytes": 6746423296,
+        "prompt_cached_tokens_total": 125,
+        "prompt_eval_ms": 415.82,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.1885417089943076,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.1337967500003288,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.1680000132182613,
+        "ttft_ms": 423.451708003995,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2185232384
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 6746423296
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1147.4081250053132,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 625.23,
+              "decode_tokens_per_s": 43.18410824816467,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 3.137333,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 509.829,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1145.825041,
+              "started_at": "2026-10-02T21:21:33.061+00:00",
+              "ttft_ms": 523.1499170040479,
+              "wall_ms": 1147.0945830078563
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 843.7796660000458,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 506.461,
+              "decode_tokens_per_s": 45.41317100428265,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 0.964084,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 332.235,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 841.987167,
+              "started_at": "2026-10-02T21:21:34.208+00:00",
+              "ttft_ms": 336.97545899485704,
+              "wall_ms": 843.2319999992615
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1133.7967500003288,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 708.094,
+              "decode_tokens_per_s": 45.19174007970693,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 1.788792,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 415.82,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1131.064709,
+              "started_at": "2026-10-02T21:21:35.052+00:00",
+              "ttft_ms": 423.451708003995,
+              "wall_ms": 1133.0547500110697
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "wall_s": 3.3654256250010803,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 24.365417375691873,
+        "decode_tokens_per_s": 40.88542498482767,
+        "peak_phys_footprint_bytes": 2220883968,
+        "peak_rss_bytes": 6683557888,
+        "prompt_cached_tokens_total": 125,
+        "prompt_eval_ms": 426.367,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.3654256250010803,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.1596312080073403,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.12491700181271881,
+        "ttft_ms": 434.02387500100303,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2220883968
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 6683557888
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1159.6312080073403,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 637.269,
+              "decode_tokens_per_s": 42.36829345221563,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 4.3805,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 501.154,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1156.909833,
+              "started_at": "2026-10-02T21:21:36.250+00:00",
+              "ttft_ms": 521.1639999906765,
+              "wall_ms": 1158.632624996244
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 917.6920840109233,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 568.6,
+              "decode_tokens_per_s": 40.45022863172705,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 2.079791,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 336.315,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 916.583333,
+              "started_at": "2026-10-02T21:21:37.409+00:00",
+              "ttft_ms": 348.0256670009112,
+              "wall_ms": 917.4270419898676
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1216.6270419984357,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 782.675,
+              "decode_tokens_per_s": 40.88542498482767,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 1.654,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 426.367,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1215.662417,
+              "started_at": "2026-10-02T21:21:38.327+00:00",
+              "ttft_ms": 434.02387500100303,
+              "wall_ms": 1216.3902080064872
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "phase": "measured",
+      "wall_s": 3.2563185839971993,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 25.181811264714547,
+        "decode_tokens_per_s": 44.87235218065609,
+        "peak_phys_footprint_bytes": 2254438400,
+        "peak_rss_bytes": 6709084160,
+        "prompt_cached_tokens_total": 125,
+        "prompt_eval_ms": 435.499,
+        "prompt_tokens_max": 190,
+        "rep_wall_s": 3.2563185839971993,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 1,
+        "task_completion_s": 1.128220375001547,
+        "tasks_succeeded": 3,
+        "tasks_total": 3,
+        "tool_calls": 3,
+        "tool_latency_ms": 0.19033398712053895,
+        "ttft_ms": 440.96970799728297,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 2254438400
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 6709084160
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "vpn_port",
+          "wall_ms": 1128.220375001547,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 27,
+              "decode_ms": 594.991,
+              "decode_tokens_per_s": 45.37883766309071,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "vpn_port#lane0",
+              "load_ms": 2.722375,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 519.888,
+              "prompt_tokens": 178,
+              "runtime_total_ms": 1126.545041,
+              "started_at": "2026-10-02T21:21:39.615+00:00",
+              "ttft_ms": 532.3478339996655,
+              "wall_ms": 1127.827584001352
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "backups",
+          "wall_ms": 895.5422500002896,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 23,
+              "decode_ms": 531.46,
+              "decode_tokens_per_s": 43.27701049937907,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "backups#lane0",
+              "load_ms": 3.730917,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 351.714,
+              "prompt_tokens": 168,
+              "runtime_total_ms": 893.852667,
+              "started_at": "2026-10-02T21:21:40.743+00:00",
+              "ttft_ms": 364.6572909929091,
+              "wall_ms": 895.1402079983382
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "sev1",
+          "wall_ms": 1154.5164159906562,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 32,
+              "decode_ms": 713.134,
+              "decode_tokens_per_s": 44.87235218065609,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "sev1#lane0",
+              "load_ms": 0.953583,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 55,
+              "prompt_eval_ms": 435.499,
+              "prompt_tokens": 190,
+              "runtime_total_ms": 1152.880625,
+              "started_at": "2026-10-02T21:21:41.639+00:00",
+              "ttft_ms": 440.96970799728297,
+              "wall_ms": 1153.9808329980588
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "memory_samples": {
+    "measured-0": {
+      "phys_footprint": [
+        [
+          0.059,
+          2089811968
+        ],
+        [
+          2.132,
+          2112880640
+        ],
+        [
+          3.174,
+          2113929216
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          6678609920
+        ],
+        [
+          0.259,
+          6691356672
+        ],
+        [
+          0.518,
+          6691274752
+        ],
+        [
+          0.785,
+          6668419072
+        ],
+        [
+          1.053,
+          6664601600
+        ],
+        [
+          1.319,
+          6672695296
+        ],
+        [
+          1.578,
+          6673809408
+        ],
+        [
+          1.84,
+          6673825792
+        ],
+        [
+          2.098,
+          6684966912
+        ],
+        [
+          2.359,
+          6684966912
+        ],
+        [
+          2.62,
+          6686818304
+        ],
+        [
+          2.88,
+          6686818304
+        ],
+        [
+          3.108,
+          6686818304
+        ]
+      ]
+    },
+    "measured-1": {
+      "phys_footprint": [
+        [
+          0.051,
+          2125463552
+        ],
+        [
+          2.117,
+          2148532224
+        ],
+        [
+          3.142,
+          2148532224
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          6686818304
+        ],
+        [
+          0.262,
+          6699679744
+        ],
+        [
+          0.525,
+          6700941312
+        ],
+        [
+          0.783,
+          6700941312
+        ],
+        [
+          1.049,
+          6700941312
+        ],
+        [
+          1.312,
+          6712885248
+        ],
+        [
+          1.574,
+          6714802176
+        ],
+        [
+          1.835,
+          6714802176
+        ],
+        [
+          2.092,
+          6725795840
+        ],
+        [
+          2.354,
+          6725795840
+        ],
+        [
+          2.615,
+          6725795840
+        ],
+        [
+          2.874,
+          6725795840
+        ],
+        [
+          3.088,
+          6725812224
+        ]
+      ]
+    },
+    "measured-2": {
+      "phys_footprint": [
+        [
+          0.057,
+          2161115136
+        ],
+        [
+          2.137,
+          2184183808
+        ],
+        [
+          3.189,
+          2185232384
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          6725812224
+        ],
+        [
+          0.26,
+          6738575360
+        ],
+        [
+          0.525,
+          6740459520
+        ],
+        [
+          0.801,
+          6740443136
+        ],
+        [
+          1.062,
+          6734675968
+        ],
+        [
+          1.321,
+          6746423296
+        ],
+        [
+          1.578,
+          6738690048
+        ],
+        [
+          1.836,
+          6738690048
+        ],
+        [
+          2.092,
+          6703431680
+        ],
+        [
+          2.348,
+          6692732928
+        ],
+        [
+          2.608,
+          6685655040
+        ],
+        [
+          2.865,
+          6681493504
+        ],
+        [
+          3.131,
+          6657916928
+        ],
+        [
+          3.134,
+          6657916928
+        ]
+      ]
+    },
+    "measured-3": {
+      "phys_footprint": [
+        [
+          0.058,
+          2196766720
+        ],
+        [
+          2.13,
+          2218786816
+        ],
+        [
+          3.365,
+          2220883968
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          6657949696
+        ],
+        [
+          0.264,
+          6677512192
+        ],
+        [
+          0.539,
+          6679396352
+        ],
+        [
+          0.809,
+          6677626880
+        ],
+        [
+          1.069,
+          6673842176
+        ],
+        [
+          1.333,
+          6670565376
+        ],
+        [
+          1.597,
+          6670745600
+        ],
+        [
+          1.868,
+          6668746752
+        ],
+        [
+          2.122,
+          6681575424
+        ],
+        [
+          2.384,
+          6681559040
+        ],
+        [
+          2.646,
+          6683557888
+        ],
+        [
+          2.909,
+          6669631488
+        ],
+        [
+          3.165,
+          6669189120
+        ],
+        [
+          3.303,
+          6669205504
+        ]
+      ]
+    },
+    "measured-4": {
+      "phys_footprint": [
+        [
+          0.062,
+          2231369728
+        ],
+        [
+          2.138,
+          2254438400
+        ],
+        [
+          3.256,
+          2254438400
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          6669205504
+        ],
+        [
+          0.262,
+          6682116096
+        ],
+        [
+          0.525,
+          6682116096
+        ],
+        [
+          0.799,
+          6683967488
+        ],
+        [
+          1.062,
+          6683983872
+        ],
+        [
+          1.32,
+          6695944192
+        ],
+        [
+          1.575,
+          6697910272
+        ],
+        [
+          1.842,
+          6697910272
+        ],
+        [
+          2.1,
+          6709084160
+        ],
+        [
+          2.363,
+          6709084160
+        ],
+        [
+          2.625,
+          6709084160
+        ],
+        [
+          2.887,
+          6709084160
+        ],
+        [
+          3.147,
+          6709084160
+        ],
+        [
+          3.189,
+          6709084160
+        ]
+      ]
+    },
+    "warmup--1": {
+      "phys_footprint": [
+        [
+          0.057,
+          2054160384
+        ],
+        [
+          2.136,
+          2077229056
+        ],
+        [
+          3.182,
+          2077229056
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          6645514240
+        ],
+        [
+          0.262,
+          6654148608
+        ],
+        [
+          0.523,
+          6656229376
+        ],
+        [
+          0.787,
+          6656540672
+        ],
+        [
+          1.047,
+          6656704512
+        ],
+        [
+          1.308,
+          6669631488
+        ],
+        [
+          1.569,
+          6670991360
+        ],
+        [
+          1.832,
+          6671056896
+        ],
+        [
+          2.092,
+          6682689536
+        ],
+        [
+          2.354,
+          6682689536
+        ],
+        [
+          2.619,
+          6682738688
+        ],
+        [
+          2.882,
+          6682755072
+        ],
+        [
+          3.117,
+          6679887872
+        ]
+      ]
+    }
+  }
+}

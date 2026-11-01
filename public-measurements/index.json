@@ -1,0 +1,993 @@
+{
+  "schema": "aig.public-benchmarks/1",
+  "generated_at": "2026-10-30T17:22:38+00:00",
+  "counts": {
+    "observation_records": 30,
+    "published_runs": 15,
+    "withheld_runs": 0
+  },
+  "entries": [
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 25.351118353703892,
+        "decode_tokens_per_s_range": [
+          25.101276955534576,
+          25.62614228993499
+        ],
+        "kv_and_buffers_gb": 6.94,
+        "peak_memory_gb": 8.86,
+        "peak_memory_gb_median": 8.86,
+        "prompt_tokens_max": 159,
+        "runtime_completion": "completed",
+        "task_completion_s": 28.08417112499592,
+        "task_success_rate": 0,
+        "tool_latency_ms": null,
+        "ttft_ms": 25382.058874994982
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 7.38,
+        "family": "Gemma 4",
+        "lab_key": "ollama/gemma4:12b/sha256:1278394b6936",
+        "name": "Gemma 4 12B",
+        "parameter_size": "11.9B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "gemma4:12b"
+      },
+      "run_id": "20261002T213036Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-automati-08bc6b5c",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "automation",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 60,
+        "loadAverage1m": 4.48
+      },
+      "warnings": [
+        "peak_rss_bytes has flagged outliers [3, 4]",
+        "ttft_ms has flagged outliers [3]"
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 15
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T213036Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-automati-08bc6b5c.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 26.86871943683164,
+        "decode_tokens_per_s_range": [
+          26.718540217711574,
+          27.22573812379271
+        ],
+        "kv_and_buffers_gb": 10.74,
+        "peak_memory_gb": 11.38,
+        "peak_memory_gb_median": 10.87,
+        "prompt_tokens_max": 880,
+        "runtime_completion": "completed",
+        "task_completion_s": 19.95462422950368,
+        "task_success_rate": 1,
+        "tool_latency_ms": 1.4381670043803751,
+        "ttft_ms": 583.0232500084094
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 7.38,
+        "family": "Gemma 4",
+        "lab_key": "ollama/gemma4:12b/sha256:1278394b6936",
+        "name": "Gemma 4 12B",
+        "parameter_size": "11.9B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "gemma4:12b"
+      },
+      "run_id": "20261002T213905Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-browser_-aba2d06b",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "browser_tool",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 78,
+        "loadAverage1m": 7.32
+      },
+      "warnings": [
+        "ttft_ms has flagged outliers [0]"
+      ],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T213905Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-browser_-aba2d06b.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 24.634027718621763,
+        "decode_tokens_per_s_range": [
+          24.39052275750104,
+          24.951739461539027
+        ],
+        "kv_and_buffers_gb": 8.32,
+        "peak_memory_gb": 10.26,
+        "peak_memory_gb_median": 9.04,
+        "prompt_tokens_max": 172,
+        "runtime_completion": "completed",
+        "task_completion_s": 42.59295870900678,
+        "task_success_rate": 0,
+        "tool_latency_ms": null,
+        "ttft_ms": null
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 7.38,
+        "family": "Gemma 4",
+        "lab_key": "ollama/gemma4:12b/sha256:1278394b6936",
+        "name": "Gemma 4 12B",
+        "parameter_size": "11.9B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "gemma4:12b"
+      },
+      "run_id": "20261002T214309Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-coding-1a30b2cd",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 82,
+        "loadAverage1m": 4.17
+      },
+      "warnings": [
+        "peak_rss_bytes has flagged outliers [0]"
+      ],
+      "failure_summary": [
+        {
+          "category": "output_limit",
+          "label": "Output limit reached",
+          "count": 15
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T214309Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-coding-1a30b2cd.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "high",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 25.333474191654567,
+        "decode_tokens_per_s_range": [
+          23.138748221618993,
+          26.09374193029376
+        ],
+        "kv_and_buffers_gb": 5.19,
+        "peak_memory_gb": 10.59,
+        "peak_memory_gb_median": 9.54,
+        "prompt_tokens_max": 201,
+        "runtime_completion": "completed",
+        "task_completion_s": 12.285098000007565,
+        "task_success_rate": 1,
+        "tool_latency_ms": 0.17874999321065843,
+        "ttft_ms": 11345.589375006966
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 7.38,
+        "family": "Gemma 4",
+        "lab_key": "ollama/gemma4:12b/sha256:1278394b6936",
+        "name": "Gemma 4 12B",
+        "parameter_size": "11.9B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "gemma4:12b"
+      },
+      "run_id": "20261002T215556Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-rag-2a97de43",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "rag",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 78,
+        "loadAverage1m": 9.4
+      },
+      "warnings": [],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T215556Z-gemma4-12b-q4km-m4pro24-ollama-ctx8k-c1-rag-2a97de43.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 43.31543191329764,
+        "decode_tokens_per_s_range": [
+          42.82468931707536,
+          45.06338520893203
+        ],
+        "kv_and_buffers_gb": 0.82,
+        "peak_memory_gb": 5.53,
+        "peak_memory_gb_median": 5.46,
+        "prompt_tokens_max": 151,
+        "runtime_completion": "completed",
+        "task_completion_s": 1.5580125420092372,
+        "task_success_rate": 0.6666666666666666,
+        "tool_latency_ms": null,
+        "ttft_ms": 201.39383399509825
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212142Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-automati-abf63481",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "automation",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 27,
+        "loadAverage1m": 5.86
+      },
+      "warnings": [
+        "Host memory pressure: warning (level 2); free memory 27%; 1-minute load 5.86."
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 5
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T212142Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-automati-abf63481.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 44.15534184618515,
+        "decode_tokens_per_s_range": [
+          42.86689265791655,
+          45.05052964811884
+        ],
+        "kv_and_buffers_gb": 1.71,
+        "peak_memory_gb": 5.44,
+        "peak_memory_gb_median": 5.39,
+        "prompt_tokens_max": 997,
+        "runtime_completion": "completed",
+        "task_completion_s": 21.061324854505074,
+        "task_success_rate": 0.5,
+        "tool_latency_ms": 0.0005420006345957518,
+        "ttft_ms": 271.8765000026906
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212216Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-browser_-b1c3430b",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "browser_tool",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 37,
+        "loadAverage1m": 6.52
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [0]",
+        "Host memory pressure: warning (level 2); free memory 37%; 1-minute load 6.52."
+      ],
+      "failure_summary": [
+        {
+          "category": "tool_turn_limit",
+          "label": "Tool-turn limit reached",
+          "count": 5
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T212216Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-browser_-b1c3430b.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 42.713276774914625,
+        "decode_tokens_per_s_range": [
+          42.4382988929391,
+          44.22894375586159
+        ],
+        "kv_and_buffers_gb": 2.06,
+        "peak_memory_gb": 5.4,
+        "peak_memory_gb_median": 5.32,
+        "prompt_tokens_max": 164,
+        "runtime_completion": "completed",
+        "task_completion_s": 2.6778113749896875,
+        "task_success_rate": 0.6666666666666666,
+        "tool_latency_ms": null,
+        "ttft_ms": 351.22545799822547
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212636Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-coding-36f843b8",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 31,
+        "loadAverage1m": 10.54
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [1]",
+        "ttft_ms has flagged outliers [2]",
+        "Host memory pressure: warning (level 2); free memory 31%; 1-minute load 10.54."
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 5
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T212636Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-coding-36f843b8.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 45.159405645772445,
+        "decode_tokens_per_s_range": [
+          40.89632629815542,
+          46.02474085513969
+        ],
+        "kv_and_buffers_gb": 2.27,
+        "peak_memory_gb": 5.37,
+        "peak_memory_gb_median": 5.33,
+        "prompt_tokens_max": 188,
+        "runtime_completion": "completed",
+        "task_completion_s": 1.1212212499958696,
+        "task_success_rate": 1,
+        "tool_latency_ms": 0.12962499749846756,
+        "ttft_ms": 420.54008299601264
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212724Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-rag-970bc01f",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "rag",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 30,
+        "loadAverage1m": 8.12
+      },
+      "warnings": [
+        "Host memory pressure: warning (level 2); free memory 30%; 1-minute load 8.12."
+      ],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T212724Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-rag-970bc01f.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 45.68169931265452,
+        "decode_tokens_per_s_range": [
+          40.869547858919105,
+          46.01096738830455
+        ],
+        "kv_and_buffers_gb": 2.47,
+        "peak_memory_gb": 5.34,
+        "peak_memory_gb_median": 5.29,
+        "prompt_tokens_max": 243,
+        "runtime_completion": "completed",
+        "task_completion_s": 2.073367375000089,
+        "task_success_rate": 1,
+        "tool_latency_ms": null,
+        "ttft_ms": 551.3366459999816
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212746Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-research-cb7b577c",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "research",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 31,
+        "loadAverage1m": 7.57
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [1, 4]",
+        "peak_rss_bytes has flagged outliers [0, 1]",
+        "Host memory pressure: warning (level 2); free memory 31%; 1-minute load 7.57."
+      ],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T212746Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-research-cb7b577c.json"
+    },
+    {
+      "concurrency": 2,
+      "confidence": "medium",
+      "context": 8192,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 43.0327940206908,
+        "decode_tokens_per_s_range": [
+          41.58251152164816,
+          45.09886993561154
+        ],
+        "kv_and_buffers_gb": 2.88,
+        "peak_memory_gb": 5.34,
+        "peak_memory_gb_median": 5.33,
+        "prompt_tokens_max": 242,
+        "runtime_completion": "completed",
+        "task_completion_s": 4.25616772849753,
+        "task_success_rate": 1,
+        "tool_latency_ms": null,
+        "ttft_ms": 2747.71008350217
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212814Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c2-research-6fbb1fd1",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "research",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 28,
+        "loadAverage1m": 8.18
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [3]",
+        "Host memory pressure: warning (level 2); free memory 28%; 1-minute load 8.18."
+      ],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T212814Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c2-research-6fbb1fd1.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 32768,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 45.17361726903734,
+        "decode_tokens_per_s_range": [
+          40.88542498482767,
+          45.628894497440506
+        ],
+        "kv_and_buffers_gb": 2.25,
+        "peak_memory_gb": 6.75,
+        "peak_memory_gb_median": 6.71,
+        "prompt_tokens_max": 190,
+        "runtime_completion": "completed",
+        "task_completion_s": 1.128220375001547,
+        "task_success_rate": 1,
+        "tool_latency_ms": 0.12491700181271881,
+        "ttft_ms": 423.451708003995
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5",
+        "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+        "name": "Qwen2.5 7B Instruct",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5:7b-instruct"
+      },
+      "run_id": "20261002T212119Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx32k-c1-rag-06579dcd",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "rag",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 35,
+        "loadAverage1m": 4.32
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [3]",
+        "Host memory pressure: warning (level 2); free memory 35%; 1-minute load 4.32."
+      ],
+      "failure_summary": [],
+      "source_url": "/benchmarks/data/20261002T212119Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx32k-c1-rag-06579dcd.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 4096,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 154.11032372799878,
+        "decode_tokens_per_s_range": [
+          150.53703210989903,
+          154.77950829866916
+        ],
+        "kv_and_buffers_gb": 0.41,
+        "peak_memory_gb": 1.42,
+        "peak_memory_gb_median": 1.37,
+        "prompt_tokens_max": 166,
+        "runtime_completion": "completed",
+        "task_completion_s": 1.1544269579462707,
+        "task_success_rate": 0.3333333333333333,
+        "tool_latency_ms": null,
+        "ttft_ms": 78.48329201806337
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 0.99,
+        "family": "Qwen2.5-Coder",
+        "lab_key": "ollama/qwen2.5-coder:1.5b/sha256:29d8c98fa6b0",
+        "name": "Qwen2.5 Coder 1.5B",
+        "parameter_size": "1.5B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5-coder:1.5b"
+      },
+      "run_id": "20261019T205345Z-qwen2.5-coder-1.5b-q4km-m4pro24-ollama-ctx4k-c1--a65ffba1",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.40.3"
+      },
+      "tested_at": "2026-10-19",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 2,
+        "freePercent": 45,
+        "loadAverage1m": 5.85
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [2]",
+        "Host memory pressure: warning (level 2); free memory 45%; 1-minute load 5.85."
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 10
+        }
+      ],
+      "source_url": "/benchmarks/data/20261019T205345Z-qwen2.5-coder-1.5b-q4km-m4pro24-ollama-ctx4k-c1--a65ffba1.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 4096,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 152.45550869616858,
+        "decode_tokens_per_s_range": [
+          149.21229786938719,
+          155.91461194536254
+        ],
+        "kv_and_buffers_gb": 0.39,
+        "peak_memory_gb": 1.41,
+        "peak_memory_gb_median": 1.36,
+        "prompt_tokens_max": 165,
+        "runtime_completion": "completed",
+        "task_completion_s": 1.1629973749950295,
+        "task_success_rate": 0.3333333333333333,
+        "tool_latency_ms": null,
+        "ttft_ms": 77.00037500762846
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 0.99,
+        "family": "Qwen2.5-Coder",
+        "lab_key": "ollama/qwen2.5-coder:1.5b/sha256:29d8c98fa6b0",
+        "name": "Qwen2.5 Coder 1.5B",
+        "parameter_size": "1.5B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5-coder:1.5b"
+      },
+      "run_id": "20261002T215940Z-qwen2.5-coder-1.5b-q4km-m4pro24-ollama-ctx4k-c1--a65ffba1",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.35.0"
+      },
+      "tested_at": "2026-10-02",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 76,
+        "loadAverage1m": 6.25
+      },
+      "warnings": [
+        "ttft_ms has flagged outliers [0, 4]"
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 10
+        }
+      ],
+      "source_url": "/benchmarks/data/20261002T215940Z-qwen2.5-coder-1.5b-q4km-m4pro24-ollama-ctx4k-c1--a65ffba1.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 4096,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 37.34967911686839,
+        "decode_tokens_per_s_range": [
+          36.13693209392616,
+          41.71213513655342
+        ],
+        "kv_and_buffers_gb": 0.49,
+        "peak_memory_gb": 2.26,
+        "peak_memory_gb_median": 2.25,
+        "prompt_tokens_max": 166,
+        "runtime_completion": "completed",
+        "task_completion_s": 3.4749802500009537,
+        "task_success_rate": 0.6666666666666666,
+        "tool_latency_ms": null,
+        "ttft_ms": 241.39229208230972
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 1.93,
+        "family": "Qwen2.5-Coder",
+        "lab_key": "ollama/qwen2.5-coder:3b/sha256:4a188102020e",
+        "name": "Qwen2.5 Coder 3B",
+        "parameter_size": "3.1B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5-coder:3b"
+      },
+      "run_id": "20261019T205840Z-qwen2.5-coder-3b-q4km-m4pro24-ollama-ctx4k-c1-co-16315a05",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.40.3"
+      },
+      "tested_at": "2026-10-19",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 62,
+        "loadAverage1m": 5.06
+      },
+      "warnings": [
+        "decode_tokens_per_s has flagged outliers [4]"
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 5
+        }
+      ],
+      "source_url": "/benchmarks/data/20261019T205840Z-qwen2.5-coder-3b-q4km-m4pro24-ollama-ctx4k-c1-co-16315a05.json"
+    },
+    {
+      "concurrency": 1,
+      "confidence": "medium",
+      "context": 4096,
+      "hardware": {
+        "chip": "Apple M4 Pro",
+        "lab_key": "apple-m4-pro-24gb",
+        "memory_gib": 24,
+        "memory_kind": "unified",
+        "os": "macOS 15.5"
+      },
+      "measured": {
+        "decode_tokens_per_s": 23.09683513106091,
+        "decode_tokens_per_s_range": [
+          21.32698628091933,
+          27.912287457032846
+        ],
+        "kv_and_buffers_gb": 0.66,
+        "peak_memory_gb": 5.04,
+        "peak_memory_gb_median": 4.97,
+        "prompt_tokens_max": 164,
+        "runtime_completion": "completed",
+        "task_completion_s": 5.281196666997857,
+        "task_success_rate": 0.6666666666666666,
+        "tool_latency_ms": null,
+        "ttft_ms": 590.8899999922141
+      },
+      "methodology_version": "1.0.0",
+      "model": {
+        "artifact_size_gb": 4.68,
+        "family": "Qwen2.5-Coder",
+        "lab_key": "ollama/qwen2.5-coder:7b/sha256:60e05f210007",
+        "name": "Qwen2.5 Coder 7B",
+        "parameter_size": "7.6B",
+        "quantization": "Q4_K_M",
+        "runtime_ref": "qwen2.5-coder:7b"
+      },
+      "run_id": "20261019T205941Z-qwen2.5-coder-7b-q4km-m4pro24-ollama-ctx4k-c1-co-8d518f80",
+      "runtime": {
+        "id": "ollama",
+        "server_parallel_slots": 1,
+        "version": "0.40.3"
+      },
+      "tested_at": "2026-10-19",
+      "workload": {
+        "id": "coding",
+        "version": "1.0.0"
+      },
+      "environment": {
+        "pressureLevel": 1,
+        "freePercent": 61,
+        "loadAverage1m": 11.55
+      },
+      "warnings": [
+        "decode tokens/s CV 0.11773956207866021 exceeds 0.1"
+      ],
+      "failure_summary": [
+        {
+          "category": "checker_failure",
+          "label": "Checker failed",
+          "count": 5
+        }
+      ],
+      "source_url": "/benchmarks/data/20261019T205941Z-qwen2.5-coder-7b-q4km-m4pro24-ollama-ctx4k-c1-co-8d518f80.json"
+    }
+  ],
+  "withheld": [],
+  "retractions": [
+    {
+      "id": "qwen2.5-7b-mac-mini-m4",
+      "retractedAt": "2026-09-17",
+      "originalLocation": "src/data/benchmarks.ts",
+      "originalContent": {
+        "testName": "Ollama Qwen2.5-7B Q4_K_M — Mac Mini M4 16 GB",
+        "results": [
+          {
+            "metric": "tokens/sec (first token)",
+            "value": 45,
+            "unit": "t/s"
+          },
+          {
+            "metric": "tokens/sec (avg generation)",
+            "value": 620,
+            "unit": "t/s"
+          },
+          {
+            "metric": "peak memory",
+            "value": 5.2,
+            "unit": "GB used of 16"
+          }
+        ]
+      },
+      "reasons": [
+        "No raw evidence capture exists for this measurement.",
+        "620 t/s exceeds the memory-bandwidth ceiling for a ~4.7 GB Q4 artifact on a Mac mini M4 (~120 GB/s → ~25 t/s) by roughly 25x.",
+        "45 t/s also exceeds that ceiling.",
+        "'tokens/sec (first token)' is a dimension error: time-to-first-token is a latency, not a rate.",
+        "The only environment capture in the repository (research/tests/shared/local-baseline.txt) records an Apple M4 Pro with 24 GiB, not a Mac mini M4 16 GB."
+      ],
+      "disposition": "Deleted, not repaired. The correct values are unknown and reconstructing them would be fabrication."
+    }
+  ]
+}

@@ -1,0 +1,2749 @@
+{
+  "schema": "aig.public-measurement-extract/1",
+  "notice": "Allowlisted extract, not an unchanged original. Local paths, endpoints, process IDs, generated content and free-text runtime errors are omitted. Numeric measurements are unchanged. Public checksums cover these extracts, not the original seal.",
+  "source_seal_digest": "sha256:e19d2a456724a089c60e19070f3a047feef302d51a7c9fc4cea794bdfde18f20",
+  "run_id": "20261002T212814Z-qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c2-research-6fbb1fd1",
+  "model": {
+    "artifact_size_gb": 4.68,
+    "family": "Qwen2.5",
+    "lab_key": "ollama/qwen2.5:7b-instruct/sha256:2bada8a74506",
+    "name": "Qwen2.5 7B Instruct",
+    "parameter_size": "7.6B",
+    "quantization": "Q4_K_M",
+    "runtime_ref": "qwen2.5:7b-instruct"
+  },
+  "hardware": {
+    "chip": "Apple M4 Pro",
+    "lab_key": "apple-m4-pro-24gb",
+    "memory_gib": 24,
+    "memory_kind": "unified",
+    "os": "macOS 15.5"
+  },
+  "runtime": {
+    "id": "ollama",
+    "server_parallel_slots": 1,
+    "version": "0.35.0"
+  },
+  "tested_at": "2026-10-02",
+  "methodology_version": "1.0.0",
+  "config": {
+    "concurrency": 2,
+    "context": 8192,
+    "max_output_tokens": 1024,
+    "seed": 42,
+    "temperature": 0
+  },
+  "workload": {
+    "definition_sha256": "d13760f0ef7488b28e942cf755e34865ac003a2648ce375c7d73dc01d580c1a0",
+    "id": "research",
+    "version": "1.0.0"
+  },
+  "identity_checks": {
+    "artifact_hash": {
+      "ok": true
+    },
+    "effective_context": {
+      "ok": true
+    },
+    "manifest_digest": {
+      "ok": true
+    },
+    "memory_sampling_target": {
+      "ok": true
+    },
+    "model_resident": {
+      "ok": true
+    },
+    "no_contention_during_run": {
+      "ok": true
+    },
+    "no_reload_during_run": {
+      "ok": true
+    },
+    "serving_requested_artifact": {
+      "ok": true
+    }
+  },
+  "artifact_digest": "sha256:2bada8a7450677000f678be90653b85d364de7db25eb5ea54136ada5f3933730",
+  "server_parallel_slots": 1,
+  "host": {
+    "captured_at": "2026-10-02T21:28:14+00:00",
+    "cpu": {
+      "brand": {
+        "method": "sysctl machdep.cpu.brand_string",
+        "value": "Apple M4 Pro"
+      },
+      "efficiency_cores": {
+        "method": "sysctl hw.perflevel1.physicalcpu",
+        "value": 4
+      },
+      "logical_cores": {
+        "method": "sysctl hw.logicalcpu",
+        "value": 12
+      },
+      "performance_cores": {
+        "method": "sysctl hw.perflevel0.physicalcpu",
+        "value": 8
+      }
+    },
+    "gpu": {
+      "cores": {
+        "method": "system_profiler SPDisplaysDataType sppci_cores",
+        "value": 16
+      },
+      "name": {
+        "method": "Apple silicon: the GPU is part of the SoC named by the CPU brand",
+        "value": "Apple M4 Pro"
+      }
+    },
+    "memory": {
+      "free_percent": {
+        "method": "memory_pressure -Q",
+        "value": 28
+      },
+      "kind": "unified",
+      "pressure_level": {
+        "method": "sysctl kern.memorystatus_vm_pressure_level (1 normal, 2 warn, 4 critical)",
+        "value": 2
+      },
+      "total_bytes": {
+        "method": "sysctl hw.memsize",
+        "value": 25769803776
+      }
+    },
+    "os": {
+      "build": "24F74",
+      "machine": "arm64",
+      "product": "macOS",
+      "release": "24.5.0",
+      "system": "Darwin",
+      "version": "15.5"
+    },
+    "harness": {
+      "git_commit": {
+        "method": "git rev-parse HEAD",
+        "value": "3a3aac214ab86fdefb9d1313cf6c2f765c9f5fcb"
+      },
+      "lab_tree_dirty": {
+        "method": "git status --porcelain -- lab/src lab/pyproject.toml (the measuring code)",
+        "value": false
+      },
+      "name": "aiglab",
+      "version": "1.0.0"
+    },
+    "power_source": {
+      "method": "pmset -g batt",
+      "value": "AC Power"
+    }
+  },
+  "confidence": "medium",
+  "confidence_reasons": [
+    "5 included measured repetitions",
+    "decode_tokens_per_s has flagged outliers [3]"
+  ],
+  "environment": {
+    "pressureLevel": 2,
+    "freePercent": 28,
+    "loadAverage1m": 8.18
+  },
+  "warnings": [
+    "decode_tokens_per_s has flagged outliers [3]",
+    "Host memory pressure: warning (level 2); free memory 28%; 1-minute load 8.18."
+  ],
+  "failure_summary": [],
+  "runtime_completion": {
+    "requests_failed": 0,
+    "requests_total": 20,
+    "status": "completed"
+  },
+  "task_success": {
+    "rate": 1,
+    "tasks_succeeded": 20,
+    "tasks_total": 20
+  },
+  "metrics": {
+    "aggregate_output_tokens_per_s": {
+      "all": {
+        "cv": 0.012310376542156918,
+        "max": 30.418723337440003,
+        "mean": 30.08666989420131,
+        "median": 30.19445241614949,
+        "min": 29.457975795754848,
+        "n": 5,
+        "stdev": 0.3703782352971946
+      },
+      "included": {
+        "cv": 0.012310376542156918,
+        "max": 30.418723337440003,
+        "mean": 30.08666989420131,
+        "median": 30.19445241614949,
+        "min": 29.457975795754848,
+        "n": 5,
+        "stdev": 0.3703782352971946
+      },
+      "outliers": [
+        1
+      ],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 30.26402549715307
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 1,
+          "value": 29.457975795754848
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 30.09817242450914
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 30.418723337440003
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 30.19445241614949
+        }
+      ]
+    },
+    "decode_tokens_per_s": {
+      "all": {
+        "cv": 0.029506215569578997,
+        "max": 45.09886993561154,
+        "mean": 43.17540126352061,
+        "median": 43.0327940206908,
+        "min": 41.58251152164816,
+        "n": 5,
+        "stdev": 1.2739426969845127
+      },
+      "included": {
+        "cv": 0.029506215569578997,
+        "max": 45.09886993561154,
+        "mean": 43.17540126352061,
+        "median": 43.0327940206908,
+        "min": 41.58251152164816,
+        "n": 5,
+        "stdev": 1.2739426969845127
+      },
+      "outliers": [
+        3
+      ],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 42.752259670077336
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 41.58251152164816
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 43.41057116957522
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 3,
+          "value": 45.09886993561154
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 43.0327940206908
+        }
+      ]
+    },
+    "peak_phys_footprint_bytes": {
+      "all": {
+        "cv": 0.038808215834375624,
+        "max": 2878341120,
+        "mean": 2742865100.8,
+        "median": 2740977664,
+        "min": 2608857088,
+        "n": 5,
+        "stdev": 106445700.83642286
+      },
+      "included": {
+        "cv": 0.038808215834375624,
+        "max": 2878341120,
+        "mean": 2742865100.8,
+        "median": 2740977664,
+        "min": 2608857088,
+        "n": 5,
+        "stdev": 106445700.83642286
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 2608857088
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 2675965952
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 2740977664
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 2810183680
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 2878341120
+        }
+      ]
+    },
+    "peak_rss_bytes": {
+      "all": {
+        "cv": 0.0018115030883291278,
+        "max": 5338349568,
+        "mean": 5326982348.8,
+        "median": 5326766080,
+        "min": 5313576960,
+        "n": 5,
+        "stdev": 9649844.976325952
+      },
+      "included": {
+        "cv": 0.0018115030883291278,
+        "max": 5338349568,
+        "mean": 5326982348.8,
+        "median": 5326766080,
+        "min": 5313576960,
+        "n": 5,
+        "stdev": 9649844.976325952
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 5326766080
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 5313576960
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 5322588160
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 5338349568
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 5333630976
+        }
+      ]
+    },
+    "prompt_cached_tokens_total": {
+      "all": {
+        "cv": 0,
+        "max": 58,
+        "mean": 58,
+        "median": 58,
+        "min": 58,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 58,
+        "mean": 58,
+        "median": 58,
+        "min": 58,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 58
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 58
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 58
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 58
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 58
+        }
+      ]
+    },
+    "prompt_eval_ms": {
+      "all": {
+        "cv": 0.0066923302778032195,
+        "max": 625.1310000000001,
+        "mean": 620.0033,
+        "median": 620.367,
+        "min": 613.7339999999999,
+        "n": 5,
+        "stdev": 4.1492668569279125
+      },
+      "included": {
+        "cv": 0.0066923302778032195,
+        "max": 625.1310000000001,
+        "mean": 620.0033,
+        "median": 620.367,
+        "min": 613.7339999999999,
+        "n": 5,
+        "stdev": 4.1492668569279125
+      },
+      "outliers": [
+        0
+      ],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 0,
+          "value": 613.7339999999999
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 619.202
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 620.367
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 625.1310000000001
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 621.5825
+        }
+      ]
+    },
+    "prompt_tokens_max": {
+      "all": {
+        "cv": 0,
+        "max": 242,
+        "mean": 242,
+        "median": 242,
+        "min": 242,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 242,
+        "mean": 242,
+        "median": 242,
+        "min": 242,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 242
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 242
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 242
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 242
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 242
+        }
+      ]
+    },
+    "rep_wall_s": {
+      "all": {
+        "cv": 0.012175933495011624,
+        "max": 8.908921290989383,
+        "mean": 8.821026124799392,
+        "median": 8.843237667009817,
+        "min": 8.638398249997408,
+        "n": 5,
+        "stdev": 0.1074042274533175
+      },
+      "included": {
+        "cv": 0.012175933495011624,
+        "max": 8.908921290989383,
+        "mean": 8.821026124799392,
+        "median": 8.843237667009817,
+        "min": 8.638398249997408,
+        "n": 5,
+        "stdev": 0.1074042274533175
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 8.888440833005006
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 8.826132582995342
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 8.638398249997408
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 8.843237667009817
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 8.908921290989383
+        }
+      ]
+    },
+    "success_rate": {
+      "all": {
+        "cv": 0,
+        "max": 1,
+        "mean": 1,
+        "median": 1,
+        "min": 1,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 1,
+        "mean": 1,
+        "median": 1,
+        "min": 1,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "fraction",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1
+        }
+      ]
+    },
+    "task_completion_s": {
+      "all": {
+        "cv": 0.030992947109923934,
+        "max": 4.414291916997172,
+        "mean": 4.253706912398047,
+        "median": 4.25616772849753,
+        "min": 4.088558333496621,
+        "n": 5,
+        "stdev": 0.1318349133570705
+      },
+      "included": {
+        "cv": 0.030992947109923934,
+        "max": 4.414291916997172,
+        "mean": 4.253706912398047,
+        "median": 4.25616772849753,
+        "min": 4.088558333496621,
+        "n": 5,
+        "stdev": 0.1318349133570705
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 4.414291916997172
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 4.25616772849753
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 4.088558333496621
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 4.164061228999344
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 4.345455353999569
+        }
+      ]
+    },
+    "tool_latency_ms": {
+      "status": "unavailable",
+      "unit": "ms"
+    },
+    "ttft_ms": {
+      "all": {
+        "cv": 0.0271683834707155,
+        "max": 2877.761604504485,
+        "mean": 2782.2949126013555,
+        "median": 2747.71008350217,
+        "min": 2709.1290629978175,
+        "n": 5,
+        "stdev": 75.59045511417449
+      },
+      "included": {
+        "cv": 0.0271683834707155,
+        "max": 2877.761604504485,
+        "mean": 2782.2949126013555,
+        "median": 2747.71008350217,
+        "min": 2709.1290629978175,
+        "n": 5,
+        "stdev": 75.59045511417449
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 2848.089979001088
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 2728.7838330012164
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 2709.1290629978175
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 2747.71008350217
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 2877.761604504485
+        }
+      ]
+    }
+  },
+  "repetitions": [
+    {
+      "index": -1,
+      "phase": "warmup",
+      "wall_s": 8.75597349999589,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 29.69401403511809,
+        "decode_tokens_per_s": 42.993113930581494,
+        "peak_phys_footprint_bytes": 2541748224,
+        "peak_rss_bytes": 5322113024,
+        "prompt_cached_tokens_total": 48,
+        "prompt_eval_ms": 614.125,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.75597349999589,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.30442633349594,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2827.7700835024007,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2541748224
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 35,
+          "status": "measured",
+          "value_bytes": 5322113024
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4593.110000001616,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1687.721,
+              "decode_tokens_per_s": 41.476049655126644,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 3.161792,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 652.142,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4591.370458,
+              "started_at": "2026-10-02T21:28:17.031+00:00",
+              "ttft_ms": 2905.215667007724,
+              "wall_ms": 4592.978875007248
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4092.7284579956904,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1341.273,
+              "decode_tokens_per_s": 44.73362246164651,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 1.889417,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 573.937,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4091.313917,
+              "started_at": "2026-10-02T21:28:21.625+00:00",
+              "ttft_ms": 2750.3244999970775,
+              "wall_ms": 4092.494083000929
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2247.8737920027925,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1572.674,
+              "decode_tokens_per_s": 44.51017820603634,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 2.698625,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 3,
+              "prompt_eval_ms": 666.392,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2246.772292,
+              "started_at": "2026-10-02T21:28:17.032+00:00",
+              "ttft_ms": 675.3312080109026,
+              "wall_ms": 2247.8440000122646
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4516.124208996189,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1590.349,
+              "decode_tokens_per_s": 37.727567974073615,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 1.705083,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 576.108,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4515.252625,
+              "started_at": "2026-10-02T21:28:19.280+00:00",
+              "ttft_ms": 2925.5831250047777,
+              "wall_ms": 4516.05291699525
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "phase": "measured",
+      "wall_s": 8.888440833005006,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 30.26402549715307,
+        "decode_tokens_per_s": 42.752259670077336,
+        "peak_phys_footprint_bytes": 2608857088,
+        "peak_rss_bytes": 5326766080,
+        "prompt_cached_tokens_total": 58,
+        "prompt_eval_ms": 613.7339999999999,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.888440833005006,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.414291916997172,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2848.089979001088,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2608857088
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 35,
+          "status": "measured",
+          "value_bytes": 5326766080
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4533.025416996679,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1585.28,
+              "decode_tokens_per_s": 44.15623738393217,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 1.994333,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 653.111,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4532.090583,
+              "started_at": "2026-10-02T21:28:25.787+00:00",
+              "ttft_ms": 2947.9227080009878,
+              "wall_ms": 4532.949500004179
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4295.558416997665,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1419.586,
+              "decode_tokens_per_s": 42.265843703727704,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 0.909083,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 573.247,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4294.703,
+              "started_at": "2026-10-02T21:28:30.320+00:00",
+              "ttft_ms": 2875.8112500072457,
+              "wall_ms": 4295.479042004445
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2289.2709169973386,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1618.921,
+              "decode_tokens_per_s": 43.238675636426976,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 1.565125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 13,
+              "prompt_eval_ms": 661.719,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2287.955417,
+              "started_at": "2026-10-02T21:28:25.787+00:00",
+              "ttft_ms": 670.2315839938819,
+              "wall_ms": 2289.231333998032
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4535.01549999055,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 69,
+              "decode_ms": 1714.457,
+              "decode_tokens_per_s": 40.24597875595597,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 3.299708,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 574.357,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4534.027,
+              "started_at": "2026-10-02T21:28:28.077+00:00",
+              "ttft_ms": 2820.3687079949304,
+              "wall_ms": 4534.897582998383
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "wall_s": 8.826132582995342,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 29.457975795754848,
+        "decode_tokens_per_s": 41.58251152164816,
+        "peak_phys_footprint_bytes": 2675965952,
+        "peak_rss_bytes": 5313576960,
+        "prompt_cached_tokens_total": 58,
+        "prompt_eval_ms": 619.202,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.826132582995342,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.25616772849753,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2728.7838330012164,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2675965952
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 35,
+          "status": "measured",
+          "value_bytes": 5313576960
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4625.423040997703,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1734.755,
+              "decode_tokens_per_s": 40.35151937881718,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 4.325209,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 657.722,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4624.05225,
+              "started_at": "2026-10-02T21:28:34.676+00:00",
+              "ttft_ms": 2890.707915998064,
+              "wall_ms": 4625.340625003446
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4131.634791003307,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1562.878,
+              "decode_tokens_per_s": 38.39071251882744,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 2.154583,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 580.682,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4129.25675,
+              "started_at": "2026-10-02T21:28:39.301+00:00",
+              "ttft_ms": 2566.859750004369,
+              "wall_ms": 4131.534041996929
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2226.947333998396,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1555.446,
+              "decode_tokens_per_s": 45.00316950893828,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 2.712708,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 13,
+              "prompt_eval_ms": 659.098,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2225.397042,
+              "started_at": "2026-10-02T21:28:34.676+00:00",
+              "ttft_ms": 671.8535000109114,
+              "wall_ms": 2226.913375008735
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4380.700665991753,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1401.427,
+              "decode_tokens_per_s": 42.813503664479136,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 1.841542,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 578.324,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4379.630083,
+              "started_at": "2026-10-02T21:28:36.903+00:00",
+              "ttft_ms": 2979.155000008177,
+              "wall_ms": 4380.604000005405
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "wall_s": 8.638398249997408,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 30.09817242450914,
+        "decode_tokens_per_s": 43.41057116957522,
+        "peak_phys_footprint_bytes": 2740977664,
+        "peak_rss_bytes": 5322588160,
+        "prompt_cached_tokens_total": 58,
+        "prompt_eval_ms": 620.367,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.638398249997408,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.088558333496621,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2709.1290629978175,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2740977664
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 34,
+          "status": "measured",
+          "value_bytes": 5322588160
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4635.440957994433,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1607.11,
+              "decode_tokens_per_s": 43.55644604289688,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 4.405083,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 659.509,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4625.735833,
+              "started_at": "2026-10-02T21:28:43.501+00:00",
+              "ttft_ms": 3027.943958994001,
+              "wall_ms": 4635.385499990662
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 3933.076458997675,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1372.846,
+              "decode_tokens_per_s": 43.704829237948026,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 2.550416,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 580.477,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 3932.016333,
+              "started_at": "2026-10-02T21:28:48.137+00:00",
+              "ttft_ms": 2560.4552919976413,
+              "wall_ms": 3932.9784589936025
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2358.0109999893466,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1677.18,
+              "decode_tokens_per_s": 41.73672474033795,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 3.788792,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 13,
+              "prompt_eval_ms": 663.601,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2356.021,
+              "started_at": "2026-10-02T21:28:43.509+00:00",
+              "ttft_ms": 680.1788339944324,
+              "wall_ms": 2357.9170839948347
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4244.0402079955675,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1386.812,
+              "decode_tokens_per_s": 43.26469629625357,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 1.663791,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 581.225,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4242.756083,
+              "started_at": "2026-10-02T21:28:45.867+00:00",
+              "ttft_ms": 2857.8028339979937,
+              "wall_ms": 4243.864417003351
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "wall_s": 8.843237667009817,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 30.418723337440003,
+        "decode_tokens_per_s": 45.09886993561154,
+        "peak_phys_footprint_bytes": 2810183680,
+        "peak_rss_bytes": 5338349568,
+        "prompt_cached_tokens_total": 58,
+        "prompt_eval_ms": 625.1310000000001,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.843237667009817,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.164061228999344,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2747.71008350217,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2810183680
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 35,
+          "status": "measured",
+          "value_bytes": 5338349568
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4754.341292005847,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1554.796,
+              "decode_tokens_per_s": 45.02198359141649,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 2.716042,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 663.835,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4751.534292,
+              "started_at": "2026-10-02T21:28:52.139+00:00",
+              "ttft_ms": 3199.5646249997662,
+              "wall_ms": 4754.28408398875
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4010.642875000485,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1328.146,
+              "decode_tokens_per_s": 45.175756279806585,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 1.952583,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 583.669,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4009.519375,
+              "started_at": "2026-10-02T21:28:56.894+00:00",
+              "ttft_ms": 2682.6095830037957,
+              "wall_ms": 4010.4710000014165
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2530.502333000186,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1844.182,
+              "decode_tokens_per_s": 37.9572081280481,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 3.216042,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 13,
+              "prompt_eval_ms": 673.495,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2528.873417,
+              "started_at": "2026-10-02T21:28:52.140+00:00",
+              "ttft_ms": 686.1765420035226,
+              "wall_ms": 2530.4245420120424
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4317.479582998203,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 69,
+              "decode_ms": 1504.55,
+              "decode_tokens_per_s": 45.86088863779867,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 3.808417,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 586.427,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4316.148917,
+              "started_at": "2026-10-02T21:28:54.671+00:00",
+              "ttft_ms": 2812.8105840005446,
+              "wall_ms": 4317.359334003413
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "phase": "measured",
+      "wall_s": 8.908921290989383,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 30.19445241614949,
+        "decode_tokens_per_s": 43.0327940206908,
+        "peak_phys_footprint_bytes": 2878341120,
+        "peak_rss_bytes": 5333630976,
+        "prompt_cached_tokens_total": 58,
+        "prompt_eval_ms": 621.5825,
+        "prompt_tokens_max": 242,
+        "rep_wall_s": 8.908921290989383,
+        "requests_failed": 0,
+        "requests_total": 4,
+        "success_rate": 1,
+        "task_completion_s": 4.345455353999569,
+        "tasks_succeeded": 4,
+        "tasks_total": 4,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 2877.761604504485,
+        "ttft_samples": 4
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 6,
+          "status": "measured",
+          "value_bytes": 2878341120
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 35,
+          "status": "measured",
+          "value_bytes": 5333630976
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 4766.22837499599,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1769.806,
+              "decode_tokens_per_s": 39.55235771604345,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane0",
+              "load_ms": 4.316958,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 660.177,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 4764.70775,
+              "started_at": "2026-10-02T21:29:00.984+00:00",
+              "ttft_ms": 2995.632750011282,
+              "wall_ms": 4766.103333007777
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 0,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4079.542332998244,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 60,
+              "decode_ms": 1319.32,
+              "decode_tokens_per_s": 45.47797350150078,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane0",
+              "load_ms": 3.540541,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 582.73,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4076.749166,
+              "started_at": "2026-10-02T21:29:05.751+00:00",
+              "ttft_ms": 2759.8904589976883,
+              "wall_ms": 4079.0347500005737
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "halvard",
+          "wall_ms": 2329.1118330089375,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 70,
+              "decode_ms": 1648.265,
+              "decode_tokens_per_s": 42.46889911513015,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "halvard#lane1",
+              "load_ms": 3.750917,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 13,
+              "prompt_eval_ms": 667.341,
+              "prompt_tokens": 242,
+              "runtime_total_ms": 2328.307709,
+              "started_at": "2026-10-02T21:29:00.984+00:00",
+              "ttft_ms": 681.0608750092797,
+              "wall_ms": 2329.085125005804
+            }
+          ]
+        },
+        {
+          "check_ms": 0,
+          "lane": 1,
+          "success": true,
+          "task_id": "brightwater",
+          "wall_ms": 4611.368375000893,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 69,
+              "decode_ms": 1582.689,
+              "decode_tokens_per_s": 43.59668892625146,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "brightwater#lane1",
+              "load_ms": 1.82725,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 582.988,
+              "prompt_tokens": 213,
+              "runtime_total_ms": 4610.6725,
+              "started_at": "2026-10-02T21:29:03.313+00:00",
+              "ttft_ms": 3028.8632080046227,
+              "wall_ms": 4611.311250002473
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "memory_samples": {
+    "measured-0": {
+      "phys_footprint": [
+        [
+          0.055,
+          2555379712
+        ],
+        [
+          2.131,
+          2557476864
+        ],
+        [
+          4.208,
+          2575302656
+        ],
+        [
+          6.283,
+          2591031296
+        ],
+        [
+          8.357,
+          2608857088
+        ],
+        [
+          8.888,
+          2608857088
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5270945792
+        ],
+        [
+          0.267,
+          5286625280
+        ],
+        [
+          0.534,
+          5286625280
+        ],
+        [
+          0.793,
+          5288558592
+        ],
+        [
+          1.072,
+          5288673280
+        ],
+        [
+          1.331,
+          5288673280
+        ],
+        [
+          1.596,
+          5288673280
+        ],
+        [
+          1.858,
+          5288689664
+        ],
+        [
+          2.124,
+          5288689664
+        ],
+        [
+          2.386,
+          5306597376
+        ],
+        [
+          2.65,
+          5306597376
+        ],
+        [
+          2.914,
+          5306597376
+        ],
+        [
+          3.183,
+          5308596224
+        ],
+        [
+          3.446,
+          5308694528
+        ],
+        [
+          3.712,
+          5308694528
+        ],
+        [
+          3.978,
+          5308694528
+        ],
+        [
+          4.24,
+          5308694528
+        ],
+        [
+          4.504,
+          5308694528
+        ],
+        [
+          4.759,
+          5326569472
+        ],
+        [
+          5.025,
+          5326569472
+        ],
+        [
+          5.293,
+          5326585856
+        ],
+        [
+          5.568,
+          5326585856
+        ],
+        [
+          5.832,
+          5326585856
+        ],
+        [
+          6.101,
+          5326585856
+        ],
+        [
+          6.356,
+          5326766080
+        ],
+        [
+          6.616,
+          5324881920
+        ],
+        [
+          6.879,
+          5294178304
+        ],
+        [
+          7.147,
+          5278793728
+        ],
+        [
+          7.411,
+          5274206208
+        ],
+        [
+          7.678,
+          5274206208
+        ],
+        [
+          7.94,
+          5274173440
+        ],
+        [
+          8.215,
+          5274173440
+        ],
+        [
+          8.477,
+          5274189824
+        ],
+        [
+          8.744,
+          5274337280
+        ],
+        [
+          8.836,
+          5274353664
+        ]
+      ]
+    },
+    "measured-1": {
+      "phys_footprint": [
+        [
+          0.056,
+          2622488576
+        ],
+        [
+          2.133,
+          2624585728
+        ],
+        [
+          4.206,
+          2640314368
+        ],
+        [
+          6.286,
+          2660237312
+        ],
+        [
+          8.374,
+          2675965952
+        ],
+        [
+          8.826,
+          2675965952
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5274353664
+        ],
+        [
+          0.267,
+          5293506560
+        ],
+        [
+          0.532,
+          5293506560
+        ],
+        [
+          0.793,
+          5295538176
+        ],
+        [
+          1.055,
+          5295538176
+        ],
+        [
+          1.316,
+          5295538176
+        ],
+        [
+          1.584,
+          5295489024
+        ],
+        [
+          1.852,
+          5295489024
+        ],
+        [
+          2.116,
+          5295505408
+        ],
+        [
+          2.384,
+          5313527808
+        ],
+        [
+          2.649,
+          5313527808
+        ],
+        [
+          2.917,
+          5313560576
+        ],
+        [
+          3.186,
+          5313560576
+        ],
+        [
+          3.444,
+          5313576960
+        ],
+        [
+          3.712,
+          5313511424
+        ],
+        [
+          3.975,
+          5293391872
+        ],
+        [
+          4.238,
+          5293391872
+        ],
+        [
+          4.505,
+          5293408256
+        ],
+        [
+          4.768,
+          5311365120
+        ],
+        [
+          5.033,
+          5311365120
+        ],
+        [
+          5.3,
+          5313232896
+        ],
+        [
+          5.577,
+          5313232896
+        ],
+        [
+          5.843,
+          5273796608
+        ],
+        [
+          6.104,
+          5272682496
+        ],
+        [
+          6.36,
+          5272797184
+        ],
+        [
+          6.618,
+          5288116224
+        ],
+        [
+          6.872,
+          5288067072
+        ],
+        [
+          7.136,
+          5288067072
+        ],
+        [
+          7.406,
+          5289885696
+        ],
+        [
+          7.663,
+          5273632768
+        ],
+        [
+          7.932,
+          5273157632
+        ],
+        [
+          8.205,
+          5259329536
+        ],
+        [
+          8.468,
+          5259460608
+        ],
+        [
+          8.724,
+          5248090112
+        ],
+        [
+          8.768,
+          5247959040
+        ]
+      ]
+    },
+    "measured-2": {
+      "phys_footprint": [
+        [
+          0.068,
+          2689597440
+        ],
+        [
+          2.149,
+          2691694592
+        ],
+        [
+          4.222,
+          2709520384
+        ],
+        [
+          6.297,
+          2727346176
+        ],
+        [
+          8.374,
+          2740977664
+        ],
+        [
+          8.638,
+          2740977664
+        ]
+      ],
+      "rss": [
+        [
+          0.01,
+          5247959040
+        ],
+        [
+          0.276,
+          5264162816
+        ],
+        [
+          0.541,
+          5264162816
+        ],
+        [
+          0.806,
+          5266227200
+        ],
+        [
+          1.073,
+          5266292736
+        ],
+        [
+          1.34,
+          5266325504
+        ],
+        [
+          1.602,
+          5266374656
+        ],
+        [
+          1.868,
+          5266423808
+        ],
+        [
+          2.141,
+          5266653184
+        ],
+        [
+          2.398,
+          5284872192
+        ],
+        [
+          2.663,
+          5284872192
+        ],
+        [
+          2.929,
+          5284872192
+        ],
+        [
+          3.194,
+          5286887424
+        ],
+        [
+          3.46,
+          5286887424
+        ],
+        [
+          3.731,
+          5286887424
+        ],
+        [
+          3.995,
+          5286887424
+        ],
+        [
+          4.249,
+          5286903808
+        ],
+        [
+          4.518,
+          5286920192
+        ],
+        [
+          4.778,
+          5304827904
+        ],
+        [
+          5.045,
+          5304827904
+        ],
+        [
+          5.31,
+          5306826752
+        ],
+        [
+          5.575,
+          5306826752
+        ],
+        [
+          5.836,
+          5306826752
+        ],
+        [
+          6.096,
+          5306826752
+        ],
+        [
+          6.358,
+          5306925056
+        ],
+        [
+          6.624,
+          5322588160
+        ],
+        [
+          6.89,
+          5322588160
+        ],
+        [
+          7.152,
+          5322571776
+        ],
+        [
+          7.431,
+          5322571776
+        ],
+        [
+          7.699,
+          5322571776
+        ],
+        [
+          7.958,
+          5322571776
+        ],
+        [
+          8.217,
+          5322539008
+        ],
+        [
+          8.474,
+          5322555392
+        ],
+        [
+          8.577,
+          5322555392
+        ]
+      ]
+    },
+    "measured-3": {
+      "phys_footprint": [
+        [
+          0.062,
+          2756706304
+        ],
+        [
+          2.144,
+          2758803456
+        ],
+        [
+          4.218,
+          2776629248
+        ],
+        [
+          6.293,
+          2792357888
+        ],
+        [
+          8.375,
+          2810183680
+        ],
+        [
+          8.843,
+          2810183680
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5322555392
+        ],
+        [
+          0.266,
+          5338349568
+        ],
+        [
+          0.525,
+          5338349568
+        ],
+        [
+          0.79,
+          5325045760
+        ],
+        [
+          1.05,
+          5292359680
+        ],
+        [
+          1.31,
+          5282332672
+        ],
+        [
+          1.574,
+          5268045824
+        ],
+        [
+          1.832,
+          5268045824
+        ],
+        [
+          2.091,
+          5261688832
+        ],
+        [
+          2.356,
+          5261590528
+        ],
+        [
+          2.62,
+          5279367168
+        ],
+        [
+          2.881,
+          5279367168
+        ],
+        [
+          3.142,
+          5279367168
+        ],
+        [
+          3.408,
+          5281234944
+        ],
+        [
+          3.674,
+          5281300480
+        ],
+        [
+          3.94,
+          5281300480
+        ],
+        [
+          4.204,
+          5281300480
+        ],
+        [
+          4.463,
+          5281316864
+        ],
+        [
+          4.73,
+          5281333248
+        ],
+        [
+          4.994,
+          5299421184
+        ],
+        [
+          5.261,
+          5299421184
+        ],
+        [
+          5.524,
+          5299453952
+        ],
+        [
+          5.779,
+          5299453952
+        ],
+        [
+          6.048,
+          5299470336
+        ],
+        [
+          6.304,
+          5299470336
+        ],
+        [
+          6.566,
+          5299634176
+        ],
+        [
+          6.834,
+          5299634176
+        ],
+        [
+          7.088,
+          5315985408
+        ],
+        [
+          7.35,
+          5315985408
+        ],
+        [
+          7.606,
+          5317820416
+        ],
+        [
+          7.871,
+          5317820416
+        ],
+        [
+          8.135,
+          5317820416
+        ],
+        [
+          8.399,
+          5317836800
+        ],
+        [
+          8.668,
+          5317836800
+        ],
+        [
+          8.775,
+          5317771264
+        ]
+      ]
+    },
+    "measured-4": {
+      "phys_footprint": [
+        [
+          0.051,
+          2823815168
+        ],
+        [
+          2.131,
+          2825912320
+        ],
+        [
+          4.201,
+          2843738112
+        ],
+        [
+          6.28,
+          2860515328
+        ],
+        [
+          8.346,
+          2878341120
+        ],
+        [
+          8.909,
+          2878341120
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5317771264
+        ],
+        [
+          0.267,
+          5333467136
+        ],
+        [
+          0.534,
+          5333467136
+        ],
+        [
+          0.798,
+          5333499904
+        ],
+        [
+          1.065,
+          5333630976
+        ],
+        [
+          1.326,
+          5333565440
+        ],
+        [
+          1.587,
+          5327273984
+        ],
+        [
+          1.852,
+          5297946624
+        ],
+        [
+          2.12,
+          5281710080
+        ],
+        [
+          2.376,
+          5283266560
+        ],
+        [
+          2.638,
+          5282922496
+        ],
+        [
+          2.905,
+          5282889728
+        ],
+        [
+          3.168,
+          5271617536
+        ],
+        [
+          3.431,
+          5259264000
+        ],
+        [
+          3.697,
+          5259231232
+        ],
+        [
+          3.967,
+          5259231232
+        ],
+        [
+          4.231,
+          5251022848
+        ],
+        [
+          4.494,
+          5241733120
+        ],
+        [
+          4.763,
+          5241847808
+        ],
+        [
+          5.029,
+          5261017088
+        ],
+        [
+          5.296,
+          5261017088
+        ],
+        [
+          5.563,
+          5261230080
+        ],
+        [
+          5.828,
+          5261230080
+        ],
+        [
+          6.089,
+          5261230080
+        ],
+        [
+          6.344,
+          5261344768
+        ],
+        [
+          6.614,
+          5261623296
+        ],
+        [
+          6.882,
+          5261639680
+        ],
+        [
+          7.152,
+          5277564928
+        ],
+        [
+          7.42,
+          5277564928
+        ],
+        [
+          7.682,
+          5279449088
+        ],
+        [
+          7.949,
+          5279449088
+        ],
+        [
+          8.215,
+          5279449088
+        ],
+        [
+          8.479,
+          5279416320
+        ],
+        [
+          8.748,
+          5279629312
+        ],
+        [
+          8.855,
+          5279629312
+        ]
+      ]
+    },
+    "warmup--1": {
+      "phys_footprint": [
+        [
+          0.055,
+          2488270848
+        ],
+        [
+          2.123,
+          2490368000
+        ],
+        [
+          4.199,
+          2506096640
+        ],
+        [
+          6.279,
+          2523922432
+        ],
+        [
+          8.358,
+          2541748224
+        ],
+        [
+          8.756,
+          2541748224
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          5292294144
+        ],
+        [
+          0.268,
+          5298569216
+        ],
+        [
+          0.532,
+          5298569216
+        ],
+        [
+          0.791,
+          5300469760
+        ],
+        [
+          1.06,
+          5300486144
+        ],
+        [
+          1.326,
+          5300486144
+        ],
+        [
+          1.591,
+          5300502528
+        ],
+        [
+          1.852,
+          5300502528
+        ],
+        [
+          2.113,
+          5300502528
+        ],
+        [
+          2.38,
+          5318393856
+        ],
+        [
+          2.64,
+          5318393856
+        ],
+        [
+          2.907,
+          5318475776
+        ],
+        [
+          3.174,
+          5318475776
+        ],
+        [
+          3.439,
+          5318475776
+        ],
+        [
+          3.699,
+          5318475776
+        ],
+        [
+          3.963,
+          5318475776
+        ],
+        [
+          4.219,
+          5318426624
+        ],
+        [
+          4.478,
+          5318426624
+        ],
+        [
+          4.738,
+          5322113024
+        ],
+        [
+          5.003,
+          5320343552
+        ],
+        [
+          5.267,
+          5285806080
+        ],
+        [
+          5.529,
+          5269864448
+        ],
+        [
+          5.794,
+          5268406272
+        ],
+        [
+          6.052,
+          5268176896
+        ],
+        [
+          6.314,
+          5265031168
+        ],
+        [
+          6.574,
+          5265178624
+        ],
+        [
+          6.84,
+          5268963328
+        ],
+        [
+          7.099,
+          5268963328
+        ],
+        [
+          7.364,
+          5270896640
+        ],
+        [
+          7.631,
+          5270913024
+        ],
+        [
+          7.898,
+          5270913024
+        ],
+        [
+          8.161,
+          5270913024
+        ],
+        [
+          8.423,
+          5270945792
+        ],
+        [
+          8.692,
+          5270945792
+        ],
+        [
+          8.695,
+          5270945792
+        ]
+      ]
+    }
+  }
+}

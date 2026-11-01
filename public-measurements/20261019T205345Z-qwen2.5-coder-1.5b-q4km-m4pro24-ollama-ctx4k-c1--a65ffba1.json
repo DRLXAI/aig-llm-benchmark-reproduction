@@ -1,0 +1,2007 @@
+{
+  "schema": "aig.public-measurement-extract/1",
+  "notice": "Allowlisted extract, not an unchanged original. Local paths, endpoints, process IDs, generated content and free-text runtime errors are omitted. Numeric measurements are unchanged. Public checksums cover these extracts, not the original seal.",
+  "source_seal_digest": "sha256:178dcced44782dd242c7c88e85622ee326c133f603741f9cc9b007632e301ea2",
+  "run_id": "20261019T205345Z-qwen2.5-coder-1.5b-q4km-m4pro24-ollama-ctx4k-c1--a65ffba1",
+  "model": {
+    "artifact_size_gb": 0.99,
+    "family": "Qwen2.5-Coder",
+    "lab_key": "ollama/qwen2.5-coder:1.5b/sha256:29d8c98fa6b0",
+    "name": "Qwen2.5 Coder 1.5B",
+    "parameter_size": "1.5B",
+    "quantization": "Q4_K_M",
+    "runtime_ref": "qwen2.5-coder:1.5b"
+  },
+  "hardware": {
+    "chip": "Apple M4 Pro",
+    "lab_key": "apple-m4-pro-24gb",
+    "memory_gib": 24,
+    "memory_kind": "unified",
+    "os": "macOS 15.5"
+  },
+  "runtime": {
+    "id": "ollama",
+    "server_parallel_slots": 1,
+    "version": "0.40.3"
+  },
+  "tested_at": "2026-10-19",
+  "methodology_version": "1.0.0",
+  "config": {
+    "concurrency": 1,
+    "context": 4096,
+    "max_output_tokens": 1024,
+    "seed": 42,
+    "temperature": 0
+  },
+  "workload": {
+    "definition_sha256": "cacc5b92ba360b5a02c0ea6c84d5ddadf52a6223cffc8dbcb19387d076363d8e",
+    "id": "coding",
+    "version": "1.0.0"
+  },
+  "identity_checks": {
+    "artifact_hash": {
+      "ok": true
+    },
+    "effective_context": {
+      "ok": true
+    },
+    "manifest_digest": {
+      "ok": true
+    },
+    "memory_sampling_target": {
+      "ok": true
+    },
+    "model_resident": {
+      "ok": true
+    },
+    "no_contention_during_run": {
+      "ok": true
+    },
+    "no_reload_during_run": {
+      "ok": true
+    },
+    "serving_requested_artifact": {
+      "ok": true
+    }
+  },
+  "artifact_digest": "sha256:29d8c98fa6b098e200069bfb88b9508dc3e85586d20cba59f8dda9a808165104",
+  "server_parallel_slots": 1,
+  "host": {
+    "captured_at": "2026-10-19T20:53:45+00:00",
+    "cpu": {
+      "brand": {
+        "method": "sysctl machdep.cpu.brand_string",
+        "value": "Apple M4 Pro"
+      },
+      "efficiency_cores": {
+        "method": "sysctl hw.perflevel1.physicalcpu",
+        "value": 4
+      },
+      "logical_cores": {
+        "method": "sysctl hw.logicalcpu",
+        "value": 12
+      },
+      "performance_cores": {
+        "method": "sysctl hw.perflevel0.physicalcpu",
+        "value": 8
+      }
+    },
+    "gpu": {
+      "cores": {
+        "method": "system_profiler SPDisplaysDataType sppci_cores",
+        "value": 16
+      },
+      "name": {
+        "method": "Apple silicon: the GPU is part of the SoC named by the CPU brand",
+        "value": "Apple M4 Pro"
+      }
+    },
+    "memory": {
+      "free_percent": {
+        "method": "memory_pressure -Q",
+        "value": 45
+      },
+      "kind": "unified",
+      "pressure_level": {
+        "method": "sysctl kern.memorystatus_vm_pressure_level (1 normal, 2 warn, 4 critical)",
+        "value": 2
+      },
+      "total_bytes": {
+        "method": "sysctl hw.memsize",
+        "value": 25769803776
+      }
+    },
+    "os": {
+      "build": "24F74",
+      "machine": "arm64",
+      "product": "macOS",
+      "release": "24.5.0",
+      "system": "Darwin",
+      "version": "15.5"
+    },
+    "harness": {
+      "git_commit": {
+        "method": "git rev-parse HEAD",
+        "value": "2a4b0f67c7393b8efe34fa4466f810650c500784"
+      },
+      "lab_tree_dirty": {
+        "method": "git status --porcelain -- lab/src lab/pyproject.toml (the measuring code)",
+        "value": false
+      },
+      "name": "aiglab",
+      "version": "1.0.0"
+    },
+    "power_source": {
+      "method": "pmset -g batt",
+      "value": "AC Power"
+    }
+  },
+  "confidence": "medium",
+  "confidence_reasons": [
+    "5 included measured repetitions",
+    "decode_tokens_per_s has flagged outliers [2]"
+  ],
+  "environment": {
+    "pressureLevel": 2,
+    "freePercent": 45,
+    "loadAverage1m": 5.85
+  },
+  "warnings": [
+    "decode_tokens_per_s has flagged outliers [2]",
+    "Host memory pressure: warning (level 2); free memory 45%; 1-minute load 5.85."
+  ],
+  "failure_summary": [
+    {
+      "category": "checker_failure",
+      "label": "Checker failed",
+      "count": 10
+    }
+  ],
+  "runtime_completion": {
+    "requests_failed": 0,
+    "requests_total": 15,
+    "status": "completed"
+  },
+  "task_success": {
+    "rate": 0.3333333333333333,
+    "tasks_succeeded": 5,
+    "tasks_total": 15
+  },
+  "metrics": {
+    "aggregate_output_tokens_per_s": {
+      "all": {
+        "cv": 0.013154975312781736,
+        "max": 136.8200527108999,
+        "mean": 134.46531903307988,
+        "median": 133.45304108532164,
+        "min": 132.77290134941674,
+        "n": 5,
+        "stdev": 1.768887952305486
+      },
+      "included": {
+        "cv": 0.013154975312781736,
+        "max": 136.8200527108999,
+        "mean": 134.46531903307988,
+        "median": 133.45304108532164,
+        "min": 132.77290134941674,
+        "n": 5,
+        "stdev": 1.768887952305486
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 133.45304108532164
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 133.41130311936203
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 132.77290134941674
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 135.86929690039918
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 136.8200527108999
+        }
+      ]
+    },
+    "decode_tokens_per_s": {
+      "all": {
+        "cv": 0.011408653985215251,
+        "max": 154.77950829866916,
+        "mean": 153.61940140081708,
+        "median": 154.11032372799878,
+        "min": 150.53703210989903,
+        "n": 5,
+        "stdev": 1.752590595997813
+      },
+      "included": {
+        "cv": 0.011408653985215251,
+        "max": 154.77950829866916,
+        "mean": 153.61940140081708,
+        "median": 154.11032372799878,
+        "min": 150.53703210989903,
+        "n": 5,
+        "stdev": 1.752590595997813
+      },
+      "outliers": [
+        2
+      ],
+      "status": "measured",
+      "unit": "tokens/s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 154.0400504131074
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 154.11032372799878
+        },
+        {
+          "excluded": false,
+          "outlier": true,
+          "repetition": 2,
+          "value": 150.53703210989903
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 154.63009245441108
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 154.77950829866916
+        }
+      ]
+    },
+    "peak_phys_footprint_bytes": {
+      "all": {
+        "cv": 0.10651582179799217,
+        "max": 411041792,
+        "mean": 364904448,
+        "median": 367001600,
+        "min": 314572800,
+        "n": 5,
+        "stdev": 38868097.1564627
+      },
+      "included": {
+        "cv": 0.10651582179799217,
+        "max": 411041792,
+        "mean": 364904448,
+        "median": 367001600,
+        "min": 314572800,
+        "n": 5,
+        "stdev": 38868097.1564627
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 314572800
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 339738624
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 367001600
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 392167424
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 411041792
+        }
+      ]
+    },
+    "peak_rss_bytes": {
+      "all": {
+        "cv": 0.030619280953401634,
+        "max": 1415659520,
+        "mean": 1366478028.8,
+        "median": 1369194496,
+        "min": 1312817152,
+        "n": 5,
+        "stdev": 41840574.68047765
+      },
+      "included": {
+        "cv": 0.030619280953401634,
+        "max": 1415659520,
+        "mean": 1366478028.8,
+        "median": 1369194496,
+        "min": 1312817152,
+        "n": 5,
+        "stdev": 41840574.68047765
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "bytes",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1312817152
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1338245120
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1369194496
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1396473856
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1415659520
+        }
+      ]
+    },
+    "prompt_cached_tokens_total": {
+      "all": {
+        "cv": 0,
+        "max": 143,
+        "mean": 143,
+        "median": 143,
+        "min": 143,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 143,
+        "mean": 143,
+        "median": 143,
+        "min": 143,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 143
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 143
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 143
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 143
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 143
+        }
+      ]
+    },
+    "prompt_eval_ms": {
+      "all": {
+        "cv": 0.005145825691508433,
+        "max": 74.053,
+        "mean": 73.5518,
+        "median": 73.566,
+        "min": 73.102,
+        "n": 5,
+        "stdev": 0.3784847420966899
+      },
+      "included": {
+        "cv": 0.005145825691508433,
+        "max": 74.053,
+        "mean": 73.5518,
+        "median": 73.566,
+        "min": 73.102,
+        "n": 5,
+        "stdev": 0.3784847420966899
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 73.566
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 74.053
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 73.102
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 73.277
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 73.761
+        }
+      ]
+    },
+    "prompt_tokens_max": {
+      "all": {
+        "cv": 0,
+        "max": 166,
+        "mean": 166,
+        "median": 166,
+        "min": 166,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 166,
+        "mean": 166,
+        "median": 166,
+        "min": 166,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "tokens",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 166
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 166
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 166
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 166
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 166
+        }
+      ]
+    },
+    "rep_wall_s": {
+      "all": {
+        "cv": 0.013087452350364962,
+        "max": 3.238612665911205,
+        "mean": 3.1982910913648084,
+        "median": 3.2221071659587324,
+        "min": 3.142814167076722,
+        "n": 5,
+        "stdev": 0.04185748226083368
+      },
+      "included": {
+        "cv": 0.013087452350364962,
+        "max": 3.238612665911205,
+        "mean": 3.1982910913648084,
+        "median": 3.2221071659587324,
+        "min": 3.142814167076722,
+        "n": 5,
+        "stdev": 0.04185748226083368
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 3.2221071659587324
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 3.2231152079766616
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 3.238612665911205
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 3.164806249900721
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 3.142814167076722
+        }
+      ]
+    },
+    "success_rate": {
+      "all": {
+        "cv": 0,
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "median": 0.3333333333333333,
+        "min": 0.3333333333333333,
+        "n": 5,
+        "stdev": 0
+      },
+      "included": {
+        "cv": 0,
+        "max": 0.3333333333333333,
+        "mean": 0.3333333333333333,
+        "median": 0.3333333333333333,
+        "min": 0.3333333333333333,
+        "n": 5,
+        "stdev": 0
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "fraction",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 0.3333333333333333
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 0.3333333333333333
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 0.3333333333333333
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 0.3333333333333333
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 0.3333333333333333
+        }
+      ]
+    },
+    "task_completion_s": {
+      "all": {
+        "cv": 0.0028515147767895033,
+        "max": 1.1578017090214416,
+        "mean": 1.1536360831931234,
+        "median": 1.1544269579462707,
+        "min": 1.149120874935761,
+        "n": 5,
+        "stdev": 0.003289610338262756
+      },
+      "included": {
+        "cv": 0.0028515147767895033,
+        "max": 1.1578017090214416,
+        "mean": 1.1536360831931234,
+        "median": 1.1544269579462707,
+        "min": 1.149120874935761,
+        "n": 5,
+        "stdev": 0.003289610338262756
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "s",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 1.1544269579462707
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 1.1518624160671607
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 1.1549684579949826
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 1.1578017090214416
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 1.149120874935761
+        }
+      ]
+    },
+    "tool_latency_ms": {
+      "status": "unavailable",
+      "unit": "ms"
+    },
+    "ttft_ms": {
+      "all": {
+        "cv": 0.011439315194938139,
+        "max": 79.27791692782193,
+        "mean": 78.28881680034101,
+        "median": 78.48329201806337,
+        "min": 77.24620797671378,
+        "n": 5,
+        "stdev": 0.8955704516178692
+      },
+      "included": {
+        "cv": 0.011439315194938139,
+        "max": 79.27791692782193,
+        "mean": 78.28881680034101,
+        "median": 78.48329201806337,
+        "min": 77.24620797671378,
+        "n": 5,
+        "stdev": 0.8955704516178692
+      },
+      "outliers": [],
+      "status": "measured",
+      "unit": "ms",
+      "values": [
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 0,
+          "value": 78.48329201806337
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 1,
+          "value": 79.27791692782193
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 2,
+          "value": 77.47837505303323
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 3,
+          "value": 77.24620797671378
+        },
+        {
+          "excluded": false,
+          "outlier": false,
+          "repetition": 4,
+          "value": 78.95829202607274
+        }
+      ]
+    }
+  },
+  "repetitions": [
+    {
+      "index": -1,
+      "phase": "warmup",
+      "wall_s": 3.2854920000536367,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 130.8784194248472,
+        "decode_tokens_per_s": 151.54809080978097,
+        "peak_phys_footprint_bytes": 292552704,
+        "peak_rss_bytes": 1285783552,
+        "prompt_cached_tokens_total": 131,
+        "prompt_eval_ms": 73.323,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.2854920000536367,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.1731843340676278,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 77.95329205691814,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 292552704
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 1285783552
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 42.988750035874546,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 709.4728329684585,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 580.187,
+              "decode_tokens_per_s": 148.22807129425513,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 3.53375,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 3,
+              "prompt_eval_ms": 121.13,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 708.171167,
+              "started_at": "2026-10-19T20:53:47.298+00:00",
+              "ttft_ms": 129.2142920428887,
+              "wall_ms": 709.3135829782113
+            }
+          ]
+        },
+        {
+          "check_ms": 33.49683398846537,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1173.1843340676278,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1108.559,
+              "decode_tokens_per_s": 151.54809080978097,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 1.636917,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 59.647,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1172.114583,
+              "started_at": "2026-10-19T20:53:48.051+00:00",
+              "ttft_ms": 64.25925006624311,
+              "wall_ms": 1173.071000026539
+            }
+          ]
+        },
+        {
+          "check_ms": 54.36216597445309,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1226.3966250466183,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1148.249,
+              "decode_tokens_per_s": 153.27685893913252,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.790292,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 73.323,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1225.557292,
+              "started_at": "2026-10-19T20:53:49.258+00:00",
+              "ttft_ms": 77.95329205691814,
+              "wall_ms": 1226.314292056486
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "phase": "measured",
+      "wall_s": 3.2221071659587324,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 133.45304108532164,
+        "decode_tokens_per_s": 154.0400504131074,
+        "peak_phys_footprint_bytes": 314572800,
+        "peak_rss_bytes": 1312817152,
+        "prompt_cached_tokens_total": 143,
+        "prompt_eval_ms": 73.566,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.2221071659587324,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.1544269579462707,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 78.48329201806337,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 314572800
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 1312817152
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 54.43270900286734,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 643.3107909979299,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 563.898,
+              "decode_tokens_per_s": 152.50985107235707,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 1.568916,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 74.056,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 641.725833,
+              "started_at": "2026-10-19T20:53:50.584+00:00",
+              "ttft_ms": 79.12195799872279,
+              "wall_ms": 643.1468330556527
+            }
+          ]
+        },
+        {
+          "check_ms": 48.655209015123546,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1154.4269579462707,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1088.487,
+              "decode_tokens_per_s": 154.34267933379084,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 1.775708,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 60.419,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1153.448375,
+              "started_at": "2026-10-19T20:53:51.282+00:00",
+              "ttft_ms": 65.68408291786909,
+              "wall_ms": 1154.3280829209834
+            }
+          ]
+        },
+        {
+          "check_ms": 54.747542017139494,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1221.4974999660626,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1142.56,
+              "decode_tokens_per_s": 154.0400504131074,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.685583,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 73.566,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1220.432875,
+              "started_at": "2026-10-19T20:53:52.485+00:00",
+              "ttft_ms": 78.48329201806337,
+              "wall_ms": 1221.3863750221208
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "phase": "measured",
+      "wall_s": 3.2231152079766616,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 133.41130311936203,
+        "decode_tokens_per_s": 154.11032372799878,
+        "peak_phys_footprint_bytes": 339738624,
+        "peak_rss_bytes": 1338245120,
+        "prompt_cached_tokens_total": 143,
+        "prompt_eval_ms": 74.053,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.2231152079766616,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.1518624160671607,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 79.27791692782193,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 339738624
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 1338245120
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 52.600708906538785,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 653.6050830036402,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 573.882,
+              "decode_tokens_per_s": 149.85659072771057,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 1.44375,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 74.182,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 652.189708,
+              "started_at": "2026-10-19T20:53:53.806+00:00",
+              "ttft_ms": 79.42191592883319,
+              "wall_ms": 653.4649579552934
+            }
+          ]
+        },
+        {
+          "check_ms": 46.97374999523163,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1151.8624160671607,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1086.169,
+              "decode_tokens_per_s": 154.67206300308698,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 2.358125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 60.197,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1150.932042,
+              "started_at": "2026-10-19T20:53:54.512+00:00",
+              "ttft_ms": 65.47866691835225,
+              "wall_ms": 1151.769374962896
+            }
+          ]
+        },
+        {
+          "check_ms": 51.516792038455606,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1221.4690420078114,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1142.039,
+              "decode_tokens_per_s": 154.11032372799878,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.750625,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 74.053,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1220.565291,
+              "started_at": "2026-10-19T20:53:55.711+00:00",
+              "ttft_ms": 79.27791692782193,
+              "wall_ms": 1221.3888339465484
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "phase": "measured",
+      "wall_s": 3.238612665911205,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 132.77290134941674,
+        "decode_tokens_per_s": 150.53703210989903,
+        "peak_phys_footprint_bytes": 367001600,
+        "peak_rss_bytes": 1369194496,
+        "prompt_cached_tokens_total": 143,
+        "prompt_eval_ms": 73.102,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.238612665911205,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.1549684579949826,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 77.47837505303323,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 367001600
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 1369194496
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 53.461415925994515,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 651.0395830264315,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 571.288,
+              "decode_tokens_per_s": 150.53703210989903,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 1.407292,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 74.318,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 649.23225,
+              "started_at": "2026-10-19T20:53:57.029+00:00",
+              "ttft_ms": 79.56087507773191,
+              "wall_ms": 650.9269160451367
+            }
+          ]
+        },
+        {
+          "check_ms": 35.894209053367376,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1154.9684579949826,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1089.643,
+              "decode_tokens_per_s": 154.17893750521958,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 1.667125,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 60.336,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1154.023167,
+              "started_at": "2026-10-19T20:53:57.734+00:00",
+              "ttft_ms": 64.92466700728983,
+              "wall_ms": 1154.8578749643639
+            }
+          ]
+        },
+        {
+          "check_ms": 44.580332934856415,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1249.6509170159698,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1171.945,
+              "decode_tokens_per_s": 150.17769605228915,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.397042,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 73.102,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1248.784542,
+              "started_at": "2026-10-19T20:53:58.925+00:00",
+              "ttft_ms": 77.47837505303323,
+              "wall_ms": 1249.5611250633374
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "phase": "measured",
+      "wall_s": 3.164806249900721,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 135.86929690039918,
+        "decode_tokens_per_s": 154.63009245441108,
+        "peak_phys_footprint_bytes": 392167424,
+        "peak_rss_bytes": 1396473856,
+        "prompt_cached_tokens_total": 143,
+        "prompt_eval_ms": 73.277,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.164806249900721,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.1578017090214416,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 77.24620797671378,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 392167424
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 14,
+          "status": "measured",
+          "value_bytes": 1396473856
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 39.984832983464,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 638.133459025994,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 556.166,
+              "decode_tokens_per_s": 154.63009245441108,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 1.766,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 74.17,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 634.9065,
+              "started_at": "2026-10-19T20:54:00.268+00:00",
+              "ttft_ms": 81.66333299595863,
+              "wall_ms": 638.0140410037711
+            }
+          ]
+        },
+        {
+          "check_ms": 31.47695807274431,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1157.8017090214416,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1093.589,
+              "decode_tokens_per_s": 153.6226132486702,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 1.478459,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 59.747,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1156.834167,
+              "started_at": "2026-10-19T20:54:00.947+00:00",
+              "ttft_ms": 63.9384159585461,
+              "wall_ms": 1157.7157910214737
+            }
+          ]
+        },
+        {
+          "check_ms": 38.395625073462725,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1214.168999926187,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1136.548,
+              "decode_tokens_per_s": 154.85487634486182,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.40425,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 73.277,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1213.245041,
+              "started_at": "2026-10-19T20:54:02.136+00:00",
+              "ttft_ms": 77.24620797671378,
+              "wall_ms": 1214.0678750583902
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "phase": "measured",
+      "wall_s": 3.142814167076722,
+      "metrics": {
+        "aggregate_output_tokens_per_s": 136.8200527108999,
+        "decode_tokens_per_s": 154.77950829866916,
+        "peak_phys_footprint_bytes": 411041792,
+        "peak_rss_bytes": 1415659520,
+        "prompt_cached_tokens_total": 143,
+        "prompt_eval_ms": 73.761,
+        "prompt_tokens_max": 166,
+        "rep_wall_s": 3.142814167076722,
+        "requests_failed": 0,
+        "requests_total": 3,
+        "success_rate": 0.3333333333333333,
+        "task_completion_s": 1.149120874935761,
+        "tasks_succeeded": 1,
+        "tasks_total": 3,
+        "tool_calls": 0,
+        "tool_latency_ms": null,
+        "tool_latency_ms_reason": "not applicable: workload has no tool or retrieval step",
+        "ttft_ms": 78.95829202607274,
+        "ttft_samples": 3
+      },
+      "memory": {
+        "peak_phys_footprint": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 2,
+          "method": "footprint -p (dirty+compressed; excludes clean mapped weights)",
+          "samples": 3,
+          "status": "measured",
+          "value_bytes": 411041792
+        },
+        "peak_rss": {
+          "bound": "lower bound (maximum of samples)",
+          "interval_s": 0.25,
+          "method": "ps -o rss= (resident set incl. mapped weights)",
+          "samples": 13,
+          "status": "measured",
+          "value_bytes": 1415659520
+        }
+      },
+      "outcomes": [
+        {
+          "check_ms": 36.31916700396687,
+          "lane": 0,
+          "success": false,
+          "task_id": "slugify",
+          "wall_ms": 635.4447499616072,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 86,
+              "decode_ms": 556.085,
+              "decode_tokens_per_s": 154.65261605689776,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "slugify#lane0",
+              "load_ms": 1.917667,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 15,
+              "prompt_eval_ms": 73.761,
+              "prompt_tokens": 134,
+              "runtime_total_ms": 633.960042,
+              "started_at": "2026-10-19T20:54:03.433+00:00",
+              "ttft_ms": 79.15674999821931,
+              "wall_ms": 635.307333082892
+            }
+          ]
+        },
+        {
+          "check_ms": 27.16649998910725,
+          "lane": 0,
+          "success": true,
+          "task_id": "merge_intervals",
+          "wall_ms": 1149.120874935761,
+          "failure_category": null,
+          "requests": [
+            {
+              "completion_tokens": 168,
+              "decode_ms": 1085.415,
+              "decode_tokens_per_s": 154.77950829866916,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "merge_intervals#lane0",
+              "load_ms": 1.349459,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 59.575,
+              "prompt_tokens": 157,
+              "runtime_total_ms": 1148.312459,
+              "started_at": "2026-10-19T20:54:04.105+00:00",
+              "ttft_ms": 63.498707953840494,
+              "wall_ms": 1149.0491660078987
+            }
+          ]
+        },
+        {
+          "check_ms": 38.41104207094759,
+          "lane": 0,
+          "success": false,
+          "task_id": "parse_duration",
+          "wall_ms": 1212.0343330316246,
+          "failure_category": "checker_failure",
+          "requests": [
+            {
+              "completion_tokens": 176,
+              "decode_ms": 1132.778,
+              "decode_tokens_per_s": 155.37024906910267,
+              "done_reason": "stop",
+              "first_chunk_kind": "content",
+              "id": "parse_duration#lane0",
+              "load_ms": 1.9985,
+              "ok": true,
+              "origin": "executed",
+              "prompt_cached_tokens": 64,
+              "prompt_eval_ms": 74.103,
+              "prompt_tokens": 166,
+              "runtime_total_ms": 1211.112167,
+              "started_at": "2026-10-19T20:54:05.281+00:00",
+              "ttft_ms": 78.95829202607274,
+              "wall_ms": 1211.9279169710353
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "memory_samples": {
+    "measured-0": {
+      "phys_footprint": [
+        [
+          0.04,
+          298844160
+        ],
+        [
+          2.102,
+          314572800
+        ],
+        [
+          3.222,
+          314572800
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          1285586944
+        ],
+        [
+          0.266,
+          1295351808
+        ],
+        [
+          0.528,
+          1295319040
+        ],
+        [
+          0.786,
+          1303511040
+        ],
+        [
+          1.048,
+          1303478272
+        ],
+        [
+          1.311,
+          1303494656
+        ],
+        [
+          1.571,
+          1303494656
+        ],
+        [
+          1.829,
+          1303494656
+        ],
+        [
+          2.087,
+          1312800768
+        ],
+        [
+          2.35,
+          1312800768
+        ],
+        [
+          2.609,
+          1312817152
+        ],
+        [
+          2.873,
+          1312817152
+        ],
+        [
+          3.137,
+          1312817152
+        ],
+        [
+          3.182,
+          1312817152
+        ]
+      ]
+    },
+    "measured-1": {
+      "phys_footprint": [
+        [
+          0.04,
+          324009984
+        ],
+        [
+          2.108,
+          339738624
+        ],
+        [
+          3.223,
+          339738624
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          1312817152
+        ],
+        [
+          0.262,
+          1322614784
+        ],
+        [
+          0.522,
+          1322614784
+        ],
+        [
+          0.78,
+          1328906240
+        ],
+        [
+          1.043,
+          1328906240
+        ],
+        [
+          1.301,
+          1328906240
+        ],
+        [
+          1.565,
+          1328906240
+        ],
+        [
+          1.828,
+          1328906240
+        ],
+        [
+          2.084,
+          1338245120
+        ],
+        [
+          2.342,
+          1338245120
+        ],
+        [
+          2.6,
+          1338245120
+        ],
+        [
+          2.862,
+          1338245120
+        ],
+        [
+          3.123,
+          1338245120
+        ],
+        [
+          3.183,
+          1338245120
+        ]
+      ]
+    },
+    "measured-2": {
+      "phys_footprint": [
+        [
+          0.04,
+          349175808
+        ],
+        [
+          2.094,
+          367001600
+        ],
+        [
+          3.239,
+          367001600
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          1338245120
+        ],
+        [
+          0.266,
+          1349877760
+        ],
+        [
+          0.525,
+          1349877760
+        ],
+        [
+          0.782,
+          1358053376
+        ],
+        [
+          1.044,
+          1358053376
+        ],
+        [
+          1.303,
+          1358053376
+        ],
+        [
+          1.567,
+          1358053376
+        ],
+        [
+          1.825,
+          1358053376
+        ],
+        [
+          2.082,
+          1369194496
+        ],
+        [
+          2.344,
+          1369194496
+        ],
+        [
+          2.606,
+          1369194496
+        ],
+        [
+          2.863,
+          1369194496
+        ],
+        [
+          3.126,
+          1369194496
+        ],
+        [
+          3.195,
+          1369194496
+        ]
+      ]
+    },
+    "measured-3": {
+      "phys_footprint": [
+        [
+          0.044,
+          374341632
+        ],
+        [
+          2.098,
+          392167424
+        ],
+        [
+          3.165,
+          392167424
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          1369194496
+        ],
+        [
+          0.267,
+          1378992128
+        ],
+        [
+          0.526,
+          1378992128
+        ],
+        [
+          0.782,
+          1387151360
+        ],
+        [
+          1.042,
+          1387151360
+        ],
+        [
+          1.303,
+          1387151360
+        ],
+        [
+          1.565,
+          1387151360
+        ],
+        [
+          1.824,
+          1387151360
+        ],
+        [
+          2.083,
+          1396473856
+        ],
+        [
+          2.341,
+          1396473856
+        ],
+        [
+          2.602,
+          1396473856
+        ],
+        [
+          2.861,
+          1396473856
+        ],
+        [
+          3.118,
+          1396473856
+        ],
+        [
+          3.125,
+          1396473856
+        ]
+      ]
+    },
+    "measured-4": {
+      "phys_footprint": [
+        [
+          0.047,
+          401604608
+        ],
+        [
+          2.101,
+          411041792
+        ],
+        [
+          3.143,
+          411041792
+        ]
+      ],
+      "rss": [
+        [
+          0.003,
+          1396473856
+        ],
+        [
+          0.264,
+          1406320640
+        ],
+        [
+          0.521,
+          1406320640
+        ],
+        [
+          0.776,
+          1406337024
+        ],
+        [
+          1.039,
+          1406337024
+        ],
+        [
+          1.301,
+          1406337024
+        ],
+        [
+          1.561,
+          1406337024
+        ],
+        [
+          1.821,
+          1406337024
+        ],
+        [
+          2.079,
+          1415643136
+        ],
+        [
+          2.336,
+          1415643136
+        ],
+        [
+          2.597,
+          1415659520
+        ],
+        [
+          2.86,
+          1415659520
+        ],
+        [
+          3.103,
+          1415659520
+        ]
+      ]
+    },
+    "warmup--1": {
+      "phys_footprint": [
+        [
+          0.058,
+          274726912
+        ],
+        [
+          2.114,
+          292552704
+        ],
+        [
+          3.285,
+          292552704
+        ]
+      ],
+      "rss": [
+        [
+          0.004,
+          1261043712
+        ],
+        [
+          0.267,
+          1265811456
+        ],
+        [
+          0.528,
+          1265876992
+        ],
+        [
+          0.785,
+          1272446976
+        ],
+        [
+          1.048,
+          1274331136
+        ],
+        [
+          1.307,
+          1274511360
+        ],
+        [
+          1.569,
+          1274527744
+        ],
+        [
+          1.831,
+          1274544128
+        ],
+        [
+          2.091,
+          1285783552
+        ],
+        [
+          2.353,
+          1285767168
+        ],
+        [
+          2.613,
+          1285668864
+        ],
+        [
+          2.875,
+          1285668864
+        ],
+        [
+          3.134,
+          1285586944
+        ],
+        [
+          3.245,
+          1285586944
+        ]
+      ]
+    }
+  }
+}

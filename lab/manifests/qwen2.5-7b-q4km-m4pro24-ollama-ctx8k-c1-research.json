@@ -1,0 +1,42 @@
+{
+  "manifest_version": 1,
+  "id": "qwen2.5-7b-q4km-m4pro24-ollama-ctx8k-c1-research",
+  "methodology_version": "1.0.0",
+  "model": {
+    "family": "Qwen2.5",
+    "name": "Qwen2.5 7B Instruct",
+    "variant": "instruct",
+    "runtime_ref": "qwen2.5:7b-instruct",
+    "quantization": "Q4_K_M",
+    "parameter_count": "7.6B"
+  },
+  "runtime": {
+    "id": "ollama",
+    "endpoint": "http://127.0.0.1:11434"
+  },
+  "target": {
+    "kind": "local",
+    "hardware_profile": "apple-m4-pro-24gb",
+    "usable_memory_gb": 24,
+    "memory_kind": "unified"
+  },
+  "config": {
+    "context": 8192,
+    "concurrency": 1,
+    "max_output_tokens": 1024,
+    "temperature": 0,
+    "seed": 42
+  },
+  "workload": {
+    "id": "research",
+    "version": "1.0.0"
+  },
+  "repetitions": {
+    "warmup": 1,
+    "measured": 5
+  },
+  "limits": {
+    "request_timeout_s": 300
+  },
+  "notes": "Initial AIG Measurement Lab baseline on the AIG Mac (shared desktop, not a dedicated host)."
+}
