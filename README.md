@@ -2,6 +2,8 @@
 
 **Public source and benchmark release for the historical Apple M4 Pro Ollama study.** The measurement index on https://agentinfraguide.com/benchmarks was refreshed **October 30, 2026** and currently contains **15 distinct measured configurations** and **75 measured repetitions** (5 per configuration). The older October 3 snapshot contained 12 and 60 and is no longer the current publication.
 
+**Independent replication requested:** [Help test Qwen2.5-Coder 1.5B / 3B / 7B on a separate Apple M4 Pro](https://github.com/DRLXAI/aig-llm-benchmark-reproduction/issues/1). The 3B speed anomaly is particularly valuable to investigate. Contradictory results are welcome.
+
 ## What is included
 
 - `lab/src/aiglab/`: the **original historical measurement harness** (model identity and runtime preflight, streaming inference, process RSS sampling, workload execution, deterministic grading, integrity sealing and aggregation). This source is a copied snapshot of the measuring code in Agent Infra Guide commit `c3cdc057f3b7f31` (Oct 2); the lab source tree was unchanged in the later Oct 19 measuring commit `2a4b0f67c7393b8efe34fa4466f810650c500784`. The original repo is private; this public copy permits independent inspection.
